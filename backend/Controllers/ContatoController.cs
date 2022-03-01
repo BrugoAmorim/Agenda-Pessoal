@@ -49,5 +49,41 @@ namespace backend.Controllers
                 );
             }
         }
+
+        [HttpPut("editar-ctt/{idctt}")]
+        public ActionResult<Models.Response.ContatosResponse> editarinfo(Models.Request.ContatoRequest informacoes, int idctt){
+
+            try{
+                Business.EditarContatoBusiness validar = new Business.EditarContatoBusiness();
+
+                Models.TbContato caixote = validar.validarupdate(idctt, informacoes);
+                Models.Response.ContatosResponse res = conversores.conversorTB(caixote);
+                return res;
+            }
+            catch(System.Exception msg){
+
+                return new BadRequestObjectResult(
+                    new Models.ErrorResponse(msg.Message, 400)
+                );
+            }
+        }
+
+        [HttpDelete("del-ctt/{idcontato}")]
+        public ActionResult<string> apagarcontato(int idcontato){
+
+            try{
+
+                Business.ApagarContatoBusiness validar = new Business.ApagarContatoBusiness();
+                validar.validardelete(idcontato);
+
+                return "O contato foi deletado!";
+            }
+            catch(System.Exception msg){
+
+                return new BadRequestObjectResult(
+                    new Models.ErrorResponse(msg.Message, 400)
+                );
+            }
+        }
     }
 }

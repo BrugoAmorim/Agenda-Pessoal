@@ -27,5 +27,35 @@ namespace backend.Database
 
             return mod;
         }
+
+        public Models.TbContato validarcontato(int id){
+
+            Models.TbContato ctt = ctx.TbContatos.FirstOrDefault(x => x.IdContato == id);
+            return ctt;
+        }
+
+        public Models.TbContato atualizarinfo(Models.Request.ContatoRequest obj, int id){
+
+            Models.TbContato modelo = ctx.TbContatos.First(x => x.IdContato == id);
+            modelo.DsCelular = obj.celular;
+            modelo.DsCidade = obj.cidade;
+            modelo.NmContato = obj.nome;
+            modelo.DsTelefone = obj.telefone;
+            modelo.DsEstado = obj.estado;
+            modelo.DsEmail = obj.email;
+            modelo.DsNotas = obj.anotacoes;
+
+            ctx.SaveChanges();
+
+            return modelo;
+        }
+
+        public void delete(int id){
+
+            Models.TbContato modelo = ctx.TbContatos.First(x => x.IdContato == id);
+
+            ctx.TbContatos.Remove(modelo);
+            ctx.SaveChanges(); 
+        }
     }
 }
