@@ -1,0 +1,152 @@
+body{
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+
+    background-image: linear-gradient(#6495ED,#A020F0);
+}
+
+.container{
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    display: flex;
+}
+
+.addcontato{
+    height: 70%;
+    width: 40%;
+    border: 1px solid black;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 1%;
+    background-color: white;
+}
+
+.lstcontatos{
+    height: 70%;
+    width: 45%;
+    border: 1px solid black;
+    flex-direction: column;
+    display: flex;
+
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    margin: 1%;
+}
+
+.subtitulo{
+    border-bottom: 2px solid black;
+    width: 95%;
+    height: 15%;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+.lista{
+    height: 80%;
+    width: 95%;
+    display: block;
+    overflow-y: auto;
+}
+
+.atualizar{
+    height: 95%;
+    width: 20%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.eventoup{
+    height: 90%;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    border: none;
+    background-color: transparent;
+}
+
+.eventoup:hover{
+    background-color: rgba(82, 81, 81, 0.089);
+    transition: 0.3s;
+}
+
+.eventodel{
+    height: 95%;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    border: none;
+    background-color: transparent;
+}
+
+.eventodel:hover{
+    background-color: rgba(82, 81, 81, 0.089);
+    transition: 0.3s;
+}
+
+.container2{
+    height: 90%;
+    width: 95%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.entradas{
+    width: 100%;
+    height: 15%;
+    margin: 1%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    display: flex;
+    padding: 2%;
+}
+
+.entradas input{
+    margin: 1%;
+}
+
+.anotacoes{
+    width: 100%;
+    height: 30%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.anotacoes textarea{
+    height: 90%;
+    width: 95%;
+    outline: none;
+}
+
+.eventos{
+    width: 100%;
+    height: 15%;
+    margin: 1%;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.container3{
+    width: 40%;
+    height: 90%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
