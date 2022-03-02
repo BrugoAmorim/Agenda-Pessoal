@@ -40,7 +40,7 @@ body{
 }
 
 .subtitulo{
-    border-bottom: 2px solid black;
+    border-bottom: 1px solid black;
     width: 95%;
     height: 15%;
     justify-content: space-between;
@@ -93,6 +93,7 @@ body{
 .eventodel:hover{
     background-color: rgba(82, 81, 81, 0.089);
     transition: 0.3s;
+    width: 30%;
 }
 
 .container2{

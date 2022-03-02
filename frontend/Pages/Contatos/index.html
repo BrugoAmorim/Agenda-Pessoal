@@ -16,34 +16,34 @@
             <div class="container2">
                 <div class="entradas">
                     <div class="input-group flex-nowrap">
-                        <input type="text" class="form-control" placeholder="Nome" aria-label="Username" aria-describedby="addon-wrapping">
+                        <input id="Nome" type="text" class="form-control" placeholder="Nome" aria-label="Username" aria-describedby="addon-wrapping">
                     </div>
                     <div class="input-group flex-nowrap">
-                        <input type="text" class="form-control" placeholder="Email" aria-label="Username" aria-describedby="addon-wrapping">
-                    </div>
-                </div>
-                <div class="entradas">
-                    <div class="input-group flex-nowrap">
-                        <input type="text" class="form-control" placeholder="Celular" aria-label="Username" aria-describedby="addon-wrapping">
-                    </div>
-                    <div class="input-group flex-nowrap">
-                        <input type="text" class="form-control" placeholder="Telefone" aria-label="Username" aria-describedby="addon-wrapping">
+                        <input id="Email" type="text" class="form-control" placeholder="Email" aria-label="Username" aria-describedby="addon-wrapping">
                     </div>
                 </div>
                 <div class="entradas">
                     <div class="input-group flex-nowrap">
-                        <input type="text" class="form-control" placeholder="Estado" aria-label="Username" aria-describedby="addon-wrapping">
+                        <input id="Celular" type="text" class="form-control" placeholder="Celular" aria-label="Username" aria-describedby="addon-wrapping">
                     </div>
                     <div class="input-group flex-nowrap">
-                        <input type="text" class="form-control" placeholder="Cidade" aria-label="Username" aria-describedby="addon-wrapping">
+                        <input id="Telefone" type="text" class="form-control" placeholder="Telefone" aria-label="Username" aria-describedby="addon-wrapping">
+                    </div>
+                </div>
+                <div class="entradas">
+                    <div class="input-group flex-nowrap">
+                        <input id="Estado" type="text" class="form-control" placeholder="Estado" aria-label="Username" aria-describedby="addon-wrapping">
+                    </div>
+                    <div class="input-group flex-nowrap">
+                        <input id="Cidade" type="text" class="form-control" placeholder="Cidade" aria-label="Username" aria-describedby="addon-wrapping">
                     </div>
                 </div>
                 <div class="anotacoes">
-                    <textarea maxlength="80" id="" cols="30" rows="10" placeholder="Notas(Max: 80 caractéres)"></textarea>
+                    <textarea maxlength="80" id="Notas" cols="30" rows="10" placeholder="Notas(Max: 80 caractéres)"></textarea>
                 </div>
                 <div class="eventos">
                     <div class="container3">
-                        <button class="btn btn-primary">Adicionar</button>
+                        <button id="btnAdicionar" class="btn btn-primary">Adicionar</button>
                     </div>
                 </div>
             </div>
@@ -52,34 +52,21 @@
             <div class="subtitulo">
                 <h1>Contatos:</h1>
                 <div class="atualizar">
-                    <button class="eventoup">
+                    <button id="Recarregarpag" class="eventoup">
                         <img height="40em" width="40em" src="../../Images/refresh.png" al   t="Recarregar contatos">
                     </button>
                 </div>
             </div>
             <div class="lista">
                 <table class="table table-striped">
-                    <tbody>
-                        <tr>
-                            <th>Pessoa 1</th>
-                            <td>
-                                <button class="eventodel">
-                                    <img height="25em" width="25em" src="../../Images/trash.png" alt="lixeira">
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>Pessoa 2</th>
-                            <td>
-                                <button class="eventodel">
-                                    <img height="25em" width="25em" src="../../Images/trash.png" alt="lixeira">
-                                </button>
-                            </td>
-                        </tr>
+                    <tbody id="conteudo">
+                        <!-- informacoes dos contatos -->
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
+    <script src="../../Src/script.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 </html>
