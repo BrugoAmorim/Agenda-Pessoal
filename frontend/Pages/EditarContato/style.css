@@ -1,0 +1,81 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    height: 100vh;
+
+    background-image: linear-gradient(#6495ED,#A020F0);
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.caixote{
+    height: 80%;
+    width: 55%;
+
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.caixinha{
+    height: 95%;
+    width: 85%;
+    border: 1px solid black;
+    
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    background-color: white;
+}
+
+.bloco, .bloco6{
+    height: 10%;
+    width: 95%;
+
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.bloco2, .bloco3, .bloco4{
+    height: 15%;
+    width: 95%;
+
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.bloco5{
+    height: 25%;
+    width: 95%;
+
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.caixatexto{
+    height: 95%;
+    width: 70%;
+
+    display: flex;
+}
+
+.eventos{
+    height: 90%;
+    width: 85%;
+    align-items: center;
+    justify-content: space-evenly;
+    display: flex;
+}
