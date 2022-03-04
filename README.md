@@ -15,11 +15,18 @@ será adicionado futuramente, enquanto isso vou fazendo uma parte de cada vez.
 
 ## Telas do Sistema
 
-Tela inicial do sistema, aqui o usuário pode ver seus contatos salvos e caso queira adicionar mais um, ele faria nesta mesma tela. O sistema não permite que o usuário salve contatos sem antes preencher o campo do nome, este é o único campo que realmente é obrigatório ser preenchido. Junto deste campo temos: um campo para adicionar email, N° telefone,
+<strong> Tela inicial </strong>- aqui o usuário pode ver seus contatos salvos e caso queira adicionar mais um, ele faria nesta mesma tela. O sistema não permite que o usuário salve contatos sem antes preencher o campo do nome, este é o único campo que realmente é obrigatório ser preenchido. Junto deste campo temos: um campo para adicionar email, N° telefone,
 N° celular, estado da onde este contato é, sua cidade e por fim um bloco de notas, que serve para fazer uma breve descrição do contato.
 
 <div align="center" display="flex">
   <img src=https://user-images.githubusercontent.com/87936511/156566739-4beca511-b28f-4ac0-bd15-c33fd05284ef.png>
+</div>
+
+<strong>Editar Informações </strong>- aqui é possível ver as informações do contato, se o usuário quiser, o mesmo pode editar os detalhes por aqui, assim como é obrigátorio
+preencher o campo de nome para adicionar um contato, aqui também é a mesma coisa, você pode deixar todos os outros campos vazios, menos o nome do contato.
+
+<div align="center" display="flex">
+  <img src=https://user-images.githubusercontent.com/87936511/156770036-90c9e2a5-65f7-461b-a021-31fadb414be7.png />
 </div>
 
 ## Protótipo
