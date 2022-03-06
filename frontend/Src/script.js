@@ -1,4 +1,6 @@
 
+import {salvarinfotemporarias} from './session.js'
+
 let corpo = document.getElementById("conteudo");
 
 // quando a pagina carregar, os contatos do usuario serao mostrados
@@ -21,12 +23,16 @@ window.onload = async () => {
             let container = document.createElement('tr');
             let nome = document.createElement('th');
             let cmpdeletar = document.createElement('td');
+            let linknome = document.createElement('button');
             let btndel = document.createElement('button');
             let imglixeira = document.createElement('img');
 
             let obj = modelo[i];
-
-            nome.appendChild(document.createTextNode(obj.nome));
+            
+            linknome.appendChild(document.createTextNode(obj.nome));
+            linknome.classList.add("linkcontato");
+            
+            nome.appendChild(linknome);
             
             imglixeira.src = "../../images/trash.png";
             imglixeira.height = 20;
@@ -41,6 +47,12 @@ window.onload = async () => {
             container.appendChild(cmpdeletar);
 
             corpo.appendChild(container);
+        
+            if(linknome.addEventListener("click", function(){
+
+                // quando o usuario clicar em um nome, as informacoes do mesmo serao salvas temporariamente, o usuario sera mandado para a pagina de editar contato
+                salvarinfotemporarias(obj);
+            }));
         }
     });
 }
@@ -86,7 +98,7 @@ add.onclick = async () => {
     res.then(res => {
         
         if(res.codigo == 400)
-            swal("Ops! Algo deu Errado", res.mensagem, "error");   
+            swal("Ops! Algo deu Errado 😵", res.mensagem, "error");   
         else 
             swal("Contato Salvo!", "Atualize a página para o novo contato ser exibido", "success");
     
@@ -118,13 +130,17 @@ recarregar.onclick = async () =>{
             let container = document.createElement('tr');
             let nome = document.createElement('th');
             let cmpdeletar = document.createElement('td');
+            let linknome = document.createElement('button');
             let btndel = document.createElement('button');
             let imglixeira = document.createElement('img');
 
             let obj = modelo[i];
-
-            nome.appendChild(document.createTextNode(obj.nome));
             
+            linknome.appendChild(document.createTextNode(obj.nome));
+            linknome.classList.add("linkcontato");
+            
+            nome.appendChild(linknome);
+
             imglixeira.src = "../../images/trash.png";
             imglixeira.height = 20;
             imglixeira.width = 20;
@@ -138,6 +154,11 @@ recarregar.onclick = async () =>{
             container.appendChild(cmpdeletar);
 
             corpo.appendChild(container);
+
+            if(linknome.addEventListener("click", function(){
+
+                window.location.href = "../EditarContato/index.html";
+            }));
         }
     });
 }

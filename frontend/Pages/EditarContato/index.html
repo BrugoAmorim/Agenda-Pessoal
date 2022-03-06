@@ -18,42 +18,48 @@
                     <h1 class="lead">Edite as informações do contato por aqui:</h1>
                 </div>
                 <div class="bloco2">
+                    <!-- div que guarda os inputs do nome e email -->
                     <div class="input-group flex-nowrap">
-                        <input type="text" class="form-control m-1" placeholder="Nome" aria-label="Username" aria-describedby="addon-wrapping">    
+                        <input type="text" class="form-control m-1" placeholder="Nome" aria-label="Username" aria-describedby="addon-wrapping" id="Name">    
                     </div>
                     <div class="input-group flex-nowrap">
-                        <input type="text" class="form-control m-1" placeholder="Email" aria-label="Username" aria-describedby="addon-wrapping">
+                        <input type="text" class="form-control m-1" placeholder="Email" aria-label="Username" aria-describedby="addon-wrapping" id="Mail">
                     </div>
                 </div>
                 <div class="bloco3">
+                    <!-- div que guarda os inputs do celular e telefone -->
                     <div class="input-group flex-nowrap">
-                        <input type="text" class="form-control m-1" placeholder="Celular" aria-label="Username" aria-describedby="addon-wrapping">    
+                        <input type="text" class="form-control m-1" placeholder="Celular" aria-label="Username" aria-describedby="addon-wrapping" id="Cell">    
                     </div>
                     <div class="input-group flex-nowrap">
-                        <input type="text" class="form-control m-1" placeholder="Telefone" aria-label="Username" aria-describedby="addon-wrapping">
+                        <input type="text" class="form-control m-1" placeholder="Telefone" aria-label="Username" aria-describedby="addon-wrapping" id="Phone">
                     </div>
                 </div>
                 <div class="bloco4">
+                    <!-- div que guarda os inputs do estado e cidade -->
                     <div class="input-group flex-nowrap">
-                        <input type="text" class="form-control m-1" placeholder="Estado" aria-label="Username" aria-describedby="addon-wrapping">    
+                        <input type="text" class="form-control m-1" placeholder="Estado" aria-label="Username" aria-describedby="addon-wrapping" id="State">   
                     </div>
                     <div class="input-group flex-nowrap">
-                        <input type="text" class="form-control m-1" placeholder="Cidade" aria-label="Username" aria-describedby="addon-wrapping">
+                        <input type="text" class="form-control m-1" placeholder="Cidade" aria-label="Username" aria-describedby="addon-wrapping" id="City">
                     </div>
                 </div>
                 <div class="bloco5">
+                    <!-- div para guarda o textarea, anotacoes do contato -->
                     <div class="caixatexto">
-                        <textarea class="form-control" id="" cols="30" rows="10" placeholder="Notas" maxlength="80"></textarea>
+                        <textarea class="form-control" id="Notes" cols="30" rows="10" placeholder="Notas" maxlength="80"></textarea>
                     </div>
                 </div>
                 <div class="bloco6">
                     <div class="eventos">
-                        <a href="#" class="btn btn-outline-dark">Voltar</a>
-                        <button class="btn btn-outline-success">Salvar</button>
+                        <a href="../Contatos/index.html" class="btn btn-outline-dark" id="Voltar">Voltar</a>
+                        <button class="btn btn-outline-success" id="Salvar">Salvar</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script src="../../Src/editctt.js" type="module"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 </html>
