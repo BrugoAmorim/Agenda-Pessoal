@@ -1,5 +1,5 @@
 
-import {salvarinfotemporarias} from './session.js'
+import { salvarinfotemporarias, criarinfotemporarias } from './session.js'
 
 let corpo = document.getElementById("conteudo");
 
@@ -52,6 +52,12 @@ window.onload = async () => {
 
                 // quando o usuario clicar em um nome, as informacoes do mesmo serao salvas temporariamente, o usuario sera mandado para a pagina de editar contato
                 salvarinfotemporarias(obj);
+            }));
+
+            if(btndel.addEventListener("click", function(){
+
+                // quando o usuario clicar na lixeira, o mesmo será levado para a tela de apagar contato
+                criarinfotemporarias(obj);
             }));
         }
     });
@@ -157,8 +163,16 @@ recarregar.onclick = async () =>{
 
             if(linknome.addEventListener("click", function(){
 
-                window.location.href = "../EditarContato/index.html";
+                // quando o usuario clicar em um nome, as informacoes do mesmo serao salvas temporariamente, o usuario sera mandado para a pagina de editar contato
+                salvarinfotemporarias(obj);
             }));
+
+            if(btndel.addEventListener("click", function(){
+
+                // quando o usuario clicar na lixeira, o mesmo será levado para a tela de apagar contato
+                criarinfotemporarias(obj);
+            }));
+
         }
     });
 }

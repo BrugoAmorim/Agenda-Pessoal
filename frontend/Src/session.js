@@ -1,5 +1,5 @@
 
-// Funções de Exportação
+// Funções de Exportação - Tela Editar Contato
 
 // funcao que criará um localstorage para cada informacao do contato
 export function salvarinfotemporarias(modelo){
@@ -44,6 +44,46 @@ export function apagarinfotemporarias(){
     localStorage.removeItem("city")
     localStorage.removeItem("est")
     localStorage.removeItem("notas")
+
+    window.location.href = "../Contatos/index.html";
+}
+
+// Funções de Exportação - Tela de Apagar Contato
+
+// funcao que criará um localstorage para cada informacao do contato e redirecionará o usuário para a tela de apagar contato
+export function criarinfotemporarias(modelo){
+
+    localStorage.setItem("id",modelo.idctt);
+    localStorage.setItem("nm", modelo.nome);
+    localStorage.setItem("cel", modelo.celular);
+    localStorage.setItem("tel", modelo.telefone);
+    localStorage.setItem("mail", modelo.email);
+
+    window.location.href = "../ApagarContato/apagar.html";
+}
+
+// funcao para pegar as informacoes salvas no localstorage
+export function lerinfotemporarias(){
+
+    let obj = {
+        "id":localStorage.getItem("id"),
+        "nome":localStorage.getItem("nm"),
+        "celular":localStorage.getItem("cel"),
+        "fone":localStorage.getItem("tel"),
+        "email":localStorage.getItem("mail"),
+    };
+
+    return obj;
+}
+
+// funcao pra apagar as informacoes temporarias
+export function deletarinfotemporarias(){
+
+    localStorage.removeItem("id")
+    localStorage.removeItem("nm")
+    localStorage.removeItem("cel")
+    localStorage.removeItem("tel")
+    localStorage.removeItem("mail")
 
     window.location.href = "../Contatos/index.html";
 }

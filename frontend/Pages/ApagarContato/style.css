@@ -1,0 +1,79 @@
+
+body{
+    height: 100vh;
+    padding: 0px;
+    margin: 0px;
+
+    background-image: linear-gradient(#6495ED,#A020F0);
+}
+
+.container{
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.segcontainer{
+    height: 60%;
+    width: 70%;
+
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.bloco{
+    width: 60%;
+    height: 85%;
+    border: 1px solid black;
+
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    background-color: white;
+}
+
+.texto{
+    width: 95%;
+    height: 15%;
+
+    text-align: center;
+}
+
+.informacoes{
+    width: 95%;
+    height: 55%;
+
+    flex-direction: column;
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+
+    border-bottom: 1px solid black;
+}
+
+.eventos{
+    width: 95%;
+    height: 15%;
+
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+}
+
+.campos1, .campos2{
+    width: 95%;
+    height: 40%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.campos1 input[type="text"], .campos2 input[type="text"]{
+    margin: 1%;
+}
