@@ -109,6 +109,15 @@ add.onclick = async () => {
             swal("Contato Salvo!", "Atualize a página para o novo contato ser exibido", "success");
     
     })
+    
+    // depois de adicionar o contato, os campos que tinham os valores seriam esvaziados
+    nm.value = "";
+    tel.value = "";
+    cel.value = "";
+    mail.value = "";
+    est.value = "";
+    cid.value = "";
+    ant.value = "";
 }
 
 let recarregar = document.getElementById("Recarregarpag");
