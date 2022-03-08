@@ -27,7 +27,7 @@ btnExcluir.onclick = async () => {
     let modelo = lerinfotemporarias();
     let url = "http://localhost:5000/Contato/del-ctt/" + modelo.id;
 
-    fetch(url,{
+    await fetch(url,{
 
         method:'DELETE',
         mode: 'cors'
