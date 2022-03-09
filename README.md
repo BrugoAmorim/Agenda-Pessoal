@@ -13,7 +13,7 @@ será adicionado futuramente, enquanto isso vou fazendo uma parte de cada vez.
 - Usando Javascript para frontend
 - Frameworks frontend: <strong>Bootstrap</strong> e <strong>SweetAlert</strong>
 
-## Telas do Sistema
+## Parte 1 - Agenda de contatos
 
 <strong> Tela inicial </strong>- aqui o usuário pode ver seus contatos salvos e caso queira adicionar mais um, ele faria nesta mesma tela. O sistema não permite que o usuário salve contatos sem antes preencher o campo do nome, este é o único campo que realmente é obrigatório ser preenchido. Junto deste campo temos: um campo para adicionar email, N° telefone, N° celular, estado da onde este contato é, sua cidade e por fim um bloco de notas, que serve para fazer uma breve descrição do contato.
 
@@ -37,8 +37,18 @@ alteração, a tela mostra apenas os detalhes que realmente sao relevantes na ho
 
 ## Protótipo
 
-Um pequeno rascunho de como eu planejo desenvolver as telas do meu sistema
+Um pequeno rascunho de como eu planejo desenvolver as telas da primeira parte do sistema.
 
 <div align="center">
   <img height="700em" width="900em" src=https://user-images.githubusercontent.com/87936511/156570187-e43e2921-996f-40e0-99f0-866c426ae089.png />
+</div>
+
+## Parte 2 - Bloco de notas
+
+## Protótipo
+
+Rascunho das telas que terá no sistema de bloco de notas, apenas para terem uma noção de como eu planejo desenvolver está parte do sistema.
+
+<div align="center">
+  <img height="700em" width="900em" src=https://user-images.githubusercontent.com/87936511/157466950-e43c84bc-7fdc-4bae-8e8f-e995de860f24.png />
 </div>
