@@ -15,10 +15,10 @@ ds_notas varchar(80)
 
 create table tb_bloco_nota(
 id_bloco_nota int primary key auto_increment,
-nm_bloco varchar(50),
+nm_bloco varchar(50) not null,
 ds_conteudo varchar(500),
-dt_criacao datetime,
-dt_atualizado datetime
+dt_criacao datetime not null,
+dt_atualizado datetime not null
 );
 
 select * from tb_bloco_nota;

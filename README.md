@@ -37,7 +37,7 @@ alteração, a tela mostra apenas os detalhes que realmente sao relevantes na ho
 
 ## Protótipo
 
-Um pequeno rascunho de como eu planejo desenvolver as telas da primeira parte do sistema.
+Um pequeno rascunho de como eu planejo desenvolver as telas da primeira parte do sistema; A versão final pode estar diferente dessa.
 
 <div align="center">
   <img height="700em" width="900em" src=https://user-images.githubusercontent.com/87936511/156570187-e43e2921-996f-40e0-99f0-866c426ae089.png />
@@ -47,8 +47,8 @@ Um pequeno rascunho de como eu planejo desenvolver as telas da primeira parte do
 
 ## Protótipo
 
-Rascunho das telas que terá no sistema de bloco de notas, apenas para terem uma noção de como eu planejo desenvolver está parte do sistema.
+Rascunho das telas que terá no sistema de bloco de notas, apenas para terem uma noção de como eu planejo desenvolver está parte do sistema; A versão final pode estar diferente dessa.
 
 <div align="center">
-  <img height="700em" width="900em" src=https://user-images.githubusercontent.com/87936511/157466950-e43c84bc-7fdc-4bae-8e8f-e995de860f24.png />
+  <img height="700em" width="900em" src=https://user-images.githubusercontent.com/87936511/157888870-1e493a40-34be-4239-8789-e62635366832.png />
 </div>
