@@ -17,6 +17,7 @@ namespace backend.Models
         {
         }
 
+        public virtual DbSet<TbBlocoNotas> TbBlocoNota { get; set; }
         public virtual DbSet<TbContato> TbContatos { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -30,6 +31,33 @@ namespace backend.Models
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.HasCharSet("utf8mb4");
+
+            modelBuilder.Entity<TbBlocoNotas>(entity =>
+            {
+                entity.HasKey(e => e.IdBlocoNota)
+                    .HasName("PRIMARY");
+
+                entity.ToTable("tb_bloco_nota");
+
+                entity.Property(e => e.IdBlocoNota).HasColumnName("id_bloco_nota");
+
+                entity.Property(e => e.DsConteudo)
+                    .HasMaxLength(500)
+                    .HasColumnName("ds_conteudo");
+
+                entity.Property(e => e.DtAtualizado)
+                    .HasColumnType("datetime")
+                    .HasColumnName("dt_atualizado");
+
+                entity.Property(e => e.DtCriacao)
+                    .HasColumnType("datetime")
+                    .HasColumnName("dt_criacao");
+
+                entity.Property(e => e.NmBloco)
+                    .IsRequired()
+                    .HasMaxLength(50)
+                    .HasColumnName("nm_bloco");
+            });
 
             modelBuilder.Entity<TbContato>(entity =>
             {
