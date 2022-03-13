@@ -22,5 +22,23 @@ namespace backend.Database
 
             return req;
         }
+
+        public Models.TbBlocoNotas buscararquivo(int id){
+
+            Models.TbBlocoNotas obj = ctx.TbBlocoNota.FirstOrDefault(x => x.IdBlocoNota == id);
+            return obj;
+        }
+
+        public Models.TbBlocoNotas confirmaralteracao(Models.Request.BlocodeNotasRequest req, int id){
+
+            Models.TbBlocoNotas obj = ctx.TbBlocoNota.First(x => x.IdBlocoNota == id);
+
+            obj.NmBloco = req.nome;
+            obj.DsConteudo = req.texto;
+            obj.DtAtualizado = DateTime.Now;
+
+            ctx.SaveChanges();
+            return obj;
+        }
     }
 }

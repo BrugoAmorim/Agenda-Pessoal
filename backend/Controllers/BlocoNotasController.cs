@@ -48,5 +48,23 @@ namespace backend.Controllers
                 );
             }
         }
+
+        [HttpPut("editar-bloco/{idtexto}")]
+        public ActionResult<Models.Response.NotasResponse> editartexto(int idtexto, Models.Request.BlocodeNotasRequest req){
+
+            try{
+                Business.EditarBlocoNotasBusiness validar = new Business.EditarBlocoNotasBusiness();
+                Models.TbBlocoNotas tb = validar.validarupdate(req, idtexto);
+
+                Models.Response.NotasResponse res = conversor.converterTB(tb);
+                return res;
+            }
+            catch(System.Exception msg){
+
+                return new BadRequestObjectResult(
+                    new Models.ErrorResponse(msg.Message, 400)
+                );
+            }
+        }
     }
 }
