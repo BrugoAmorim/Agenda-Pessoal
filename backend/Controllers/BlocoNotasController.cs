@@ -66,5 +66,23 @@ namespace backend.Controllers
                 );
             }
         }
+
+        [HttpDelete("excluir-bloco/{idtexto}")]
+        public ActionResult<string> apagartexto(int idtexto){
+
+            try{
+
+                Business.DeletarBlocoNotasBusiness validar = new Business.DeletarBlocoNotasBusiness();
+                validar.validardelete(idtexto);
+
+                return "Deletado com sucesso!";
+            }
+            catch(System.Exception msg){
+
+                return new BadRequestObjectResult(
+                    new Models.ErrorResponse(msg.Message, 400)
+                );
+            }
+        }
     }
 }

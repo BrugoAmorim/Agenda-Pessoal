@@ -40,5 +40,12 @@ namespace backend.Database
             ctx.SaveChanges();
             return obj;
         }
+
+        public void excluir(int id){
+
+            Models.TbBlocoNotas modelo = ctx.TbBlocoNota.First(x => x.IdBlocoNota == id);
+            ctx.TbBlocoNota.Remove(modelo);
+            ctx.SaveChanges();
+        }
     }
 }
