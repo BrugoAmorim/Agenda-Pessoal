@@ -1,0 +1,52 @@
+body{
+    height: 100vh;
+
+    background-image: linear-gradient(orange, orange);
+}
+
+.container{
+    height: 100%;
+
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.bloco{
+    height: 80%;
+    width: 50%;
+    background-color: #191919;
+
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    display: flex;
+}
+
+.titulo{
+    height: 10%;
+    width: 90%;
+    color: white;
+    border-bottom: 1px solid white;
+
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.container2{
+    height: 70%;
+    width: 90%;
+
+    display: block;
+    overflow-y: auto;
+}
+
+.eventos{
+    height: 10%;
+    width: 90%;
+
+    justify-content: space-evenly;
+    align-items: center;
+    display: flex;
+}
