@@ -13,9 +13,17 @@ será adicionado futuramente, enquanto isso vou fazendo uma parte de cada vez.
 - Usando Javascript para frontend
 - Frameworks frontend: <strong>Bootstrap</strong> e <strong>SweetAlert</strong>
 
+## Home
+
+<strong> Tela inicial -</strong> Aqui o usuário poderá escolher em qual das funcionalidades do sistema ele irá entrar.
+
+<div align="center" display="flex">
+   <img src=https://user-images.githubusercontent.com/87936511/158087147-9ab3efc0-ed40-4334-b30c-24af3a24622c.png />
+</div>
+
 ## Parte 1 - Agenda de contatos
 
-<strong> Tela inicial </strong>- aqui o usuário pode ver seus contatos salvos e caso queira adicionar mais um, ele faria nesta mesma tela. O sistema não permite que o usuário salve contatos sem antes preencher o campo do nome, este é o único campo que realmente é obrigatório ser preenchido. Junto deste campo temos: um campo para adicionar email, N° telefone, N° celular, estado da onde este contato é, sua cidade e por fim um bloco de notas, que serve para fazer uma breve descrição do contato.
+<strong> Ver Contatos </strong>- aqui o usuário pode ver seus contatos salvos e caso queira adicionar mais um, ele faria nesta mesma tela. O sistema não permite que o usuário salve contatos sem antes preencher o campo do nome, este é o único campo que realmente é obrigatório ser preenchido. Junto deste campo temos: um campo para adicionar email, N° telefone, N° celular, estado da onde este contato é, sua cidade e por fim um bloco de notas, que serve para fazer uma breve descrição do contato.
 
 <div align="center" display="flex">
   <img src=https://user-images.githubusercontent.com/87936511/157355935-c7f77c5f-690b-4383-8a71-46a77d34d640.png />
@@ -44,6 +52,13 @@ Um pequeno rascunho de como eu planejo desenvolver as telas da primeira parte do
 </div>
 
 ## Parte 2 - Bloco de notas
+
+<strong> Ver Anotações -</strong> Aqui o usuário pode ver seus textos criados, se quiser, ele pode clicar sobre o botão de excluir, que o mesmo será levado a uma outra tela
+para confirmar o excluimento, caso ele queira criar um novo bloco de texto, basta apenas clicar no botão "Novo".
+
+<div align="center" display="flex">
+   <img src=https://user-images.githubusercontent.com/87936511/158087153-4f1304cc-35cd-47f8-ba09-8c45968f9d04.png />
+</div>
 
 ## Protótipo
 
