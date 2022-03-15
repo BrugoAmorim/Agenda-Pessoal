@@ -60,6 +60,12 @@ para confirmar o excluimento, caso ele queira criar um novo bloco de texto, bast
    <img src=https://user-images.githubusercontent.com/87936511/158293099-f1a104c2-f8c8-43a6-a355-e44d620c79c8.png />
 </div>
 
+<strong> Criar Bloco de Texto -</strong> Quando o usuário clicar em "Novo", o mesmo será redirecionado para está tela aonde poderá criar suas anotações, é necessário apenas que o usuário dê um nome para o texto, para assim poder salvá-lo.
+
+<div align="center" display="flex">
+   <img src=https://user-images.githubusercontent.com/87936511/158385590-577e6919-1028-434b-8e83-f438c359876b.png />
+</div>
+
 ## Protótipo
 
 Rascunho das telas que terá no sistema de bloco de notas, apenas para terem uma noção de como eu planejo desenvolver está parte do sistema; A versão final pode estar diferente dessa.
