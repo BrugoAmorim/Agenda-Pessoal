@@ -18,7 +18,7 @@ será adicionado futuramente, enquanto isso vou fazendo uma parte de cada vez.
 <strong> Tela inicial -</strong> Aqui o usuário poderá escolher em qual das funcionalidades do sistema ele irá entrar.
 
 <div align="center" display="flex">
-   <img src=https://user-images.githubusercontent.com/87936511/158087147-9ab3efc0-ed40-4334-b30c-24af3a24622c.png />
+   <img src=https://user-images.githubusercontent.com/87936511/158293077-bbef8907-a80e-41ac-8588-ea673c6c1a66.png />
 </div>
 
 ## Parte 1 - Agenda de contatos
@@ -57,7 +57,7 @@ Um pequeno rascunho de como eu planejo desenvolver as telas da primeira parte do
 para confirmar o excluimento, caso ele queira criar um novo bloco de texto, basta apenas clicar no botão "Novo".
 
 <div align="center" display="flex">
-   <img src=https://user-images.githubusercontent.com/87936511/158087153-4f1304cc-35cd-47f8-ba09-8c45968f9d04.png />
+   <img src=https://user-images.githubusercontent.com/87936511/158293099-f1a104c2-f8c8-43a6-a355-e44d620c79c8.png />
 </div>
 
 ## Protótipo
