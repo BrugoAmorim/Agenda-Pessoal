@@ -1,0 +1,89 @@
+body{
+    height: 100vh;
+    background-image: linear-gradient(orange,orange);
+}
+
+.container{
+    height: 100%;
+
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.container2{
+    height: 80%;
+    width: 30%;
+    margin: 1%;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.container3{
+    height: 80%;
+    width: 50%;
+    margin: 1%;
+    padding: 1%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.informacoeseventos{
+    height: 40%;
+    width: 100%;
+    margin: 1%;
+
+    flex-direction: column;
+    justify-content: space-evenly;
+    display: flex;
+    
+    background-color: #191919;
+}
+
+.nomebloco{
+    height: 30%;
+    max-width: 100%;
+    margin: 1%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nomebloco input{
+    max-width:70%;
+    display: flex;
+}
+
+.eventos{
+    height: 50%;
+    max-width: 100%;
+    margin: 1%;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.eventos button{
+    min-width: 70%;
+
+    display: flex;
+    justify-content: center;
+}
+
+.blocotexto{
+    height: 100%;
+    width: 100%;
+}
+
+textarea{
+    height: 100%;
+    width: 100%;
+}
