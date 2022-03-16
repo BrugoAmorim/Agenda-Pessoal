@@ -15,19 +15,21 @@
         <div class="container2">
             <div class="informacoeseventos">
                 <div class="nomebloco">
-                    <input type="text" class="form-control" placeholder="Dê um nome ao seu texto">
+                    <input type="text" id="inpTitulo" class="form-control" placeholder="De um nome ao seu texto">
                 </div>
                 <div class="eventos">
-                    <button class="btn btn-success">Salvar</button>
-                    <button class="btn btn-outline-light">Voltar</button>
+                    <button id="btnSalvar" class="btn btn-success">Salvar</button>
+                    <a href="../BlocodeNotas/index.html" class="btn btn-outline-light">Voltar</a>
                 </div>
             </div>
         </div>
         <div class="container3">
             <div class="blocotexto">
-                <textarea name="conteudo" class="form-control" cols="30" rows="10" maxlength="500" placeholder="Escreva Aqui..."></textarea>
+                <textarea name="conteudo" id="inpConteudo" class="form-control" cols="30" rows="10" maxlength="500" placeholder="Escreva Aqui..."></textarea>
             </div>
         </div>
     </div>
+    <script src="../../Src/BlocoNotas/addbloco.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 </html>

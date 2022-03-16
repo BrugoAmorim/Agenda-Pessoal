@@ -71,7 +71,7 @@ body{
     justify-content: space-around;
 }
 
-.eventos button{
+.eventos button, .eventos a{
     min-width: 70%;
 
     display: flex;

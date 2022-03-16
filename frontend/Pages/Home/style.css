@@ -18,7 +18,9 @@ body{
     height: 15%;
     background-color: black;
 
-    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
 }
 
 .bloco{
