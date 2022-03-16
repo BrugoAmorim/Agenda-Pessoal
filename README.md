@@ -18,7 +18,7 @@ será adicionado futuramente, enquanto isso vou fazendo uma parte de cada vez.
 <strong> Tela inicial -</strong> Aqui o usuário poderá escolher em qual das funcionalidades do sistema ele irá entrar.
 
 <div align="center" display="flex">
-   <img src=https://user-images.githubusercontent.com/87936511/158293077-bbef8907-a80e-41ac-8588-ea673c6c1a66.png />
+   <img src=https://user-images.githubusercontent.com/87936511/158595026-b3d50beb-4add-41c7-837a-270448259388.png />
 </div>
 
 ## Parte 1 - Agenda de contatos
@@ -26,21 +26,25 @@ será adicionado futuramente, enquanto isso vou fazendo uma parte de cada vez.
 <strong> Ver Contatos </strong>- aqui o usuário pode ver seus contatos salvos e caso queira adicionar mais um, ele faria nesta mesma tela. O sistema não permite que o usuário salve contatos sem antes preencher o campo do nome, este é o único campo que realmente é obrigatório ser preenchido. Junto deste campo temos: um campo para adicionar email, N° telefone, N° celular, estado da onde este contato é, sua cidade e por fim um bloco de notas, que serve para fazer uma breve descrição do contato.
 
 <div align="center" display="flex">
-  <img src=https://user-images.githubusercontent.com/87936511/157355935-c7f77c5f-690b-4383-8a71-46a77d34d640.png />
+  <img src=https://user-images.githubusercontent.com/87936511/158595114-8f0d6096-a5f1-4e55-8ab3-1c9d7b7d89c1.png />
 </div>
-
+  
+###
+  
 <strong>Editar Informações </strong>- aqui é possível ver as informações do contato, se o usuário quiser, o mesmo pode editar os detalhes por aqui, assim como é obrigátorio
 preencher o campo de nome para adicionar um contato, aqui também é a mesma coisa, você pode deixar todos os outros campos vazios, menos o nome do contato.
 
 <div align="center" display="flex">
-  <img src=https://user-images.githubusercontent.com/87936511/157355685-5ab8a45f-5835-4ea1-a7c8-b5803aaa159b.png />
+  <img src=https://user-images.githubusercontent.com/87936511/158595040-3fa4c5c1-111d-4dfb-9a06-a5c1f020024e.png />
 </div>
+
+###
 
 <strong>Apagar Contato -</strong> com está tela o usuário tem a opção de apagar o contato desejado, aqui apenas é possivel ver as informações do contato, sem a possibilidade de
 alteração, a tela mostra apenas os detalhes que realmente sao relevantes na hora de adicionar um contato, como: nome, email, telefone e celular. 
 
 <div align="center" display="flex">
-  <img src=https://user-images.githubusercontent.com/87936511/157355672-8da221e4-3a4c-4105-a95d-f287a0098513.png />
+  <img src=https://user-images.githubusercontent.com/87936511/158595102-a9071863-1506-499a-a076-16176c8f71bd.png />
 </div>
 
 ## Protótipo
@@ -57,13 +61,15 @@ Um pequeno rascunho de como eu planejo desenvolver as telas da primeira parte do
 para confirmar o excluimento, caso ele queira criar um novo bloco de texto, basta apenas clicar no botão "Novo".
 
 <div align="center" display="flex">
-   <img src=https://user-images.githubusercontent.com/87936511/158293099-f1a104c2-f8c8-43a6-a355-e44d620c79c8.png />
+   <img src=https://user-images.githubusercontent.com/87936511/158595116-8ecb02ec-95c7-4ea2-b6b7-85698d1e8698.png />
 </div>
+
+###
 
 <strong> Criar Bloco de Texto -</strong> Quando o usuário clicar em "Novo", o mesmo será redirecionado para está tela aonde poderá criar suas anotações, é necessário apenas que o usuário dê um nome para o texto, para assim poder salvá-lo.
 
 <div align="center" display="flex">
-   <img src=https://user-images.githubusercontent.com/87936511/158385590-577e6919-1028-434b-8e83-f438c359876b.png />
+   <img src=https://user-images.githubusercontent.com/87936511/158595072-54a32cf7-8fe8-41ef-acd2-6fef9566ff34.png />
 </div>
 
 ## Protótipo
