@@ -1,0 +1,102 @@
+body{
+    height: 100vh;
+    background-image: linear-gradient(orange,orange);
+}
+
+.container{
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.container2{
+    height: 80%;
+    width: 30%;
+    padding: 1%;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container3{
+    height: 80%;
+    width: 50%;
+}
+
+.container3 textarea{
+    height: 100%;
+    width: 100%;
+}
+
+.bloco{
+    height: 35%;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    
+    background-color: #191919;
+}
+
+.bloco2{
+    height: 45%;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 1%;
+    background-color: #191919;
+}
+
+.evento, .nomebloco{
+    height: 40%;
+    width: 90%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.evento button, .nomebloco input{
+    min-width: 75%;
+    max-width: 75%;
+}
+
+.informacoesdata, .acoes{
+    height: 100%;
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.acoes button, .acoes a{
+    max-width: 70%;
+    min-width: 70%;
+}
+
+.infoatualizado, .infocriado{
+    height: 50%;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+    font-size: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    color: white;
+}
