@@ -1,4 +1,6 @@
 
+import { CriarInfoTemporarias } from './exportar.js'
+
 let corpotable = document.getElementById("informacoes");
 
 window.onload = async function(){
@@ -13,19 +15,22 @@ window.onload = async function(){
 
     let res = consumirapi.json();
     res.then(res => {
-        res.map(function(x){
 
-            let conjunto = document.createElement('tr');
-            let nomebl = document.createElement('td');
+        for(let item = 0; item < res.length; item++){
             
-            nomebl.appendChild(document.createTextNode(x.nome));
-            conjunto.appendChild(nomebl);
+            let valores = res[item];
 
-            corpotable.appendChild(conjunto);
+            let info = document.createElement('tr');
+            let nome = document.createElement('td');
+            
+            nome.appendChild(document.createTextNode(valores.nome));
 
-            if(corpotable.addEventListener("click", function(){
-                window.location.href = "#";
+            info.appendChild(nome);
+            corpotable.appendChild(info);
+
+            if(info.addEventListener("click", function(){
+                CriarInfoTemporarias(valores);
             }));
-        });
+        }
     });
 }
