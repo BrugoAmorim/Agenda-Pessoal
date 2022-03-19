@@ -57,8 +57,7 @@ Um pequeno rascunho de como eu planejo desenvolver as telas da primeira parte do
 
 ## Parte 2 - Bloco de notas
 
-<strong> Ver Anotações -</strong> Aqui o usuário pode ver seus textos criados, se quiser, ele pode clicar sobre o botão de excluir, que o mesmo será levado a uma outra tela
-para confirmar o excluimento, caso ele queira criar um novo bloco de texto, basta apenas clicar no botão "Novo".
+<strong> Ver Anotações -</strong> Aqui o usuário pode ver seus textos criados, na tela é possível apenas criar um novo registro, se o usuário quiser alterar um arquivo já criado, basta apenas clicar sobre o nome de um, que assim será redirecionado para uma outra tela.
 
 <div align="center" display="flex">
    <img src=https://user-images.githubusercontent.com/87936511/158595116-8ecb02ec-95c7-4ea2-b6b7-85698d1e8698.png />
@@ -70,6 +69,14 @@ para confirmar o excluimento, caso ele queira criar um novo bloco de texto, bast
 
 <div align="center" display="flex">
    <img src=https://user-images.githubusercontent.com/87936511/158595072-54a32cf7-8fe8-41ef-acd2-6fef9566ff34.png />
+</div>
+
+###
+
+<strong> Editar Bloco de Texto -</strong> Quando o usuário clicar sobre um dos registros, ele será redirecionado para está tela, aonde será possível a edição do arquivo, aqui nos é mostrado informações como: o nome do arquivo, o contéudo do arquivo, suas datas de criação e ultima atualização. Apenas é obrigátorio prencher o campo 'nome' para salvar o arquivo.
+
+<div align="center" display="flex">
+   <img src=https://user-images.githubusercontent.com/87936511/159139377-deca3bd0-96fa-4a61-b4b1-0aa9d988f4c6.png />
 </div>
 
 ## Protótipo
