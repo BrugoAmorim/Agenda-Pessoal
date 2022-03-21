@@ -68,14 +68,14 @@ namespace backend.Controllers
         }
 
         [HttpDelete("excluir-bloco/{idtexto}")]
-        public ActionResult<string> apagartexto(int idtexto){
+        public ActionResult<Models.Response.SuccessResponse> apagartexto(int idtexto){
 
             try{
 
                 Business.DeletarBlocoNotasBusiness validar = new Business.DeletarBlocoNotasBusiness();
                 validar.validardelete(idtexto);
 
-                return "Deletado com sucesso!";
+                return new Models.Response.SuccessResponse("Deletado com sucesso!", 200);
             }
             catch(System.Exception msg){
 

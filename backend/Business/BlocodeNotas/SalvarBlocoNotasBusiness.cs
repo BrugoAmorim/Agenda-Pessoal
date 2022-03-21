@@ -12,8 +12,13 @@ namespace backend.Business
 
         public Models.TbBlocoNotas validarinsert(Models.Request.BlocodeNotasRequest req){
 
+            List<Models.TbBlocoNotas> lst = banco.buscaranotacoes();
+
             if(string.IsNullOrEmpty(req.nome))
                 throw new ArgumentException("É necessário você preencher o campo nome");
+
+            if(lst.Any(x => x.NmBloco == req.nome) == true)
+                throw new ArgumentException("Um arquivo já está usando este nome, por favor tente outro");
 
             Models.TbBlocoNotas caixa = banco.adicionarbloco(conversor.converterReq(req));
             return caixa;
