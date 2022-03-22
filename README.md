@@ -79,6 +79,15 @@ Um pequeno rascunho de como eu planejo desenvolver as telas da primeira parte do
    <img src=https://user-images.githubusercontent.com/87936511/159139377-deca3bd0-96fa-4a61-b4b1-0aa9d988f4c6.png />
 </div>
 
+###
+
+<strong> Deletar Bloco de Texto -</strong> Caso o usuário queira excluir o arquivo, basta clicar sobre o botão "Excluir" que uma mensagem aparecerá perguntando se ele
+que confirmar está ação, clicando em "Sim" o arquivo sera excluído permanentemente.
+
+<div align="center" display="flex">
+   <img src=https://user-images.githubusercontent.com/87936511/159474444-6f538aa1-9aa6-4137-9551-c6665d8b2703.png />
+</div>
+
 ## Protótipo
 
 Rascunho das telas que terá no sistema de bloco de notas, apenas para terem uma noção de como eu planejo desenvolver está parte do sistema; A versão final pode estar diferente dessa.
