@@ -95,3 +95,15 @@ Rascunho das telas que terá no sistema de bloco de notas, apenas para terem uma
 <div align="center">
   <img height="700em" width="900em" src=https://user-images.githubusercontent.com/87936511/157888870-1e493a40-34be-4239-8789-e62635366832.png />
 </div>
+
+## Parte 3 - Lista de Tarefas
+
+## Protótipo
+
+como eu pretendo desenvolver as telas da parte 3, está funcionalidade tera apenas duas telas e essas telas terão todo o crud do sistema. A parte de categorias refere-se a tipos de tarefas expecificas, seja coisas que eu preciso fazer em casa ou coisas que preciso fazer no trabalho, assim facilita a organização do usuário.
+
+<div align="center">
+  <img height="500em" width="990em" src=https://user-images.githubusercontent.com/87936511/159939312-0b840fce-1e5e-4e3c-855c-3b93698557b5.png />
+</div>
+
+
