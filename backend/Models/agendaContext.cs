@@ -18,7 +18,9 @@ namespace backend.Models
         }
 
         public virtual DbSet<TbBlocoNotas> TbBlocoNota { get; set; }
+        public virtual DbSet<TbCategoria> TbCategoria { get; set; }
         public virtual DbSet<TbContato> TbContatos { get; set; }
+        public virtual DbSet<TbTarefa> TbTarefas { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -59,6 +61,26 @@ namespace backend.Models
                     .HasColumnName("nm_bloco");
             });
 
+            modelBuilder.Entity<TbCategoria>(entity =>
+            {
+                entity.HasKey(e => e.IdCategoria)
+                    .HasName("PRIMARY");
+
+                entity.ToTable("tb_categoria");
+
+                entity.Property(e => e.IdCategoria).HasColumnName("id_categoria");
+
+                entity.Property(e => e.DsCategoria)
+                    .IsRequired()
+                    .HasMaxLength(300)
+                    .HasColumnName("ds_categoria");
+
+                entity.Property(e => e.NmCategoria)
+                    .IsRequired()
+                    .HasMaxLength(100)
+                    .HasColumnName("nm_categoria");
+            });
+
             modelBuilder.Entity<TbContato>(entity =>
             {
                 entity.HasKey(e => e.IdContato)
@@ -96,6 +118,39 @@ namespace backend.Models
                     .IsRequired()
                     .HasMaxLength(80)
                     .HasColumnName("nm_contato");
+            });
+
+            modelBuilder.Entity<TbTarefa>(entity =>
+            {
+                entity.HasKey(e => e.IdTarefa)
+                    .HasName("PRIMARY");
+
+                entity.ToTable("tb_tarefa");
+
+                entity.HasIndex(e => e.IdCategoria, "id_categoria");
+
+                entity.Property(e => e.IdTarefa).HasColumnName("id_tarefa");
+
+                entity.Property(e => e.BlConcluida).HasColumnName("bl_concluida");
+
+                entity.Property(e => e.DsTarefa)
+                    .IsRequired()
+                    .HasMaxLength(200)
+                    .HasColumnName("ds_tarefa");
+
+                entity.Property(e => e.DtAdicionado)
+                    .HasColumnType("datetime")
+                    .HasColumnName("dt_adicionado");
+
+                entity.Property(e => e.IdCategoria).HasColumnName("id_categoria");
+
+                entity.Property(e => e.VlPrioridade).HasColumnName("vl_prioridade");
+
+                entity.HasOne(d => d.IdCategoriaNavigation)
+                    .WithMany(p => p.TbTarefas)
+                    .HasForeignKey(d => d.IdCategoria)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("tb_tarefa_ibfk_1");
             });
 
             OnModelCreatingPartial(modelBuilder);
