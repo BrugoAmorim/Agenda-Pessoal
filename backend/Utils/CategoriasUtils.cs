@@ -30,5 +30,14 @@ namespace backend.Utils
 
             return caixote;
         }
+
+        public Models.TbCategoria converterReq(Models.Request.CategoriaRequest req){
+
+            Models.TbCategoria tb = new Models.TbCategoria();
+            tb.NmCategoria = req.categoria;
+            tb.DsCategoria = req.descricao;
+
+            return tb;
+        }
     }
 }

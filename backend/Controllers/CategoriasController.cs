@@ -30,5 +30,25 @@ namespace backend.Controllers
                 );
             }
         }
+
+        [HttpPost("criar-categoria")]
+        public ActionResult<Models.Response.CategoriasResponse> novaCategoria(Models.Request.CategoriaRequest req){
+            
+            try{
+                Business.SalvarCategorias validar = new Business.SalvarCategorias();
+                Models.TbCategoria caixote = validar.conferircategoria(req);
+
+                Models.Response.CategoriasResponse res = conversor.converterTb(caixote);
+                return res;
+            }
+            catch(System.Exception msg){
+
+                return new BadRequestObjectResult(
+                    new Models.ErrorResponse(msg.Message, 400)
+                );
+            }
+        }
+
     }
+
 }
