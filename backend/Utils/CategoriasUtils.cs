@@ -7,7 +7,6 @@ namespace backend.Utils
 {
     public class CategoriasUtils
     {
-        
         public Models.Response.CategoriasResponse converterTb(Models.TbCategoria req){
 
             Models.Response.CategoriasResponse res = new Models.Response.CategoriasResponse();

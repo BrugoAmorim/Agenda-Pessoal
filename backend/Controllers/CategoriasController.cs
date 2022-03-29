@@ -49,6 +49,23 @@ namespace backend.Controllers
             }
         }
 
+        [HttpPut("editar-categoria/{idcategoria}")]
+        public ActionResult<Models.Response.CategoriasResponse> modificar(Models.Request.CategoriaRequest req, int idcategoria){
+
+            try{
+                Business.EditarCategoriaBusiness validar = new Business.EditarCategoriaBusiness();
+                Models.TbCategoria obj = validar.confirmaredicoes(req, idcategoria);
+
+                Models.Response.CategoriasResponse res = conversor.converterTb(obj);
+                return res;
+            }
+            catch(System.Exception msg){
+
+                return new BadRequestObjectResult(
+                    new Models.ErrorResponse(msg.Message, 400)
+                );
+            }
+        }
     }
 
 }

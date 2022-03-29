@@ -25,5 +25,22 @@ namespace backend.Database
 
             return tb;
         }
+
+        public Models.TbCategoria buscarobjid(int id){
+
+            Models.TbCategoria obj = ctx.TbCategoria.FirstOrDefault(x => x.IdCategoria == id);
+            return obj;
+        }
+
+        public Models.TbCategoria salvarupdate(Models.Request.CategoriaRequest req, int id){
+
+            Models.TbCategoria modelo = ctx.TbCategoria.First(x => x.IdCategoria == id);
+            modelo.DsCategoria = req.descricao;
+            modelo.NmCategoria = req.categoria;
+        
+            ctx.SaveChanges();
+            return modelo;
+
+        }
     }
 }
