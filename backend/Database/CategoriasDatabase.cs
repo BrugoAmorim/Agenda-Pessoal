@@ -42,5 +42,12 @@ namespace backend.Database
             return modelo;
 
         }
+
+        public void excluir(int id){
+
+            Models.TbCategoria obj = ctx.TbCategoria.First(x => x.IdCategoria == id);
+            ctx.TbCategoria.RemoveRange(obj);
+            ctx.SaveChanges();
+        }
     }
 }

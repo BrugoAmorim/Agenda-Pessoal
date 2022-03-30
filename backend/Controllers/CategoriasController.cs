@@ -66,6 +66,24 @@ namespace backend.Controllers
                 );
             }
         }
+
+        [HttpDelete("apagar-categoria/{idcategoria}")]
+        public ActionResult<Models.Response.SuccessResponse> apagarcategoria(int idcategoria){
+
+            try{
+                Business.DeletarCategoria validar = new Business.DeletarCategoria();
+                validar.confirmardelete(idcategoria);
+
+                return new Models.Response.SuccessResponse("Deletado com sucesso!", 200);
+            }
+            catch(System.Exception msg){
+
+                return new BadRequestObjectResult(
+                    new Models.ErrorResponse(msg.Message, 400)
+                );
+            }
+        }
+
     }
 
 }
