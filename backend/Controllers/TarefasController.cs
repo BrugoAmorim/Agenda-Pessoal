@@ -47,5 +47,23 @@ namespace backend.Controllers
                 );
             }
         }
+
+        [HttpPut("edit-tarefa/{idcategoria}/{idtarefa}")]
+        public ActionResult<Models.Response.TarefasResponse> atualizartarefa(int idcategoria, int idtarefa, Models.Request.AtualizarTarefaRequest req){
+
+            try{
+                Business.AtualizarTarefaBusiness validar = new Business.AtualizarTarefaBusiness();
+                Models.TbTarefa tarefa = validar.validaratualizacao(idcategoria, idtarefa, req);
+
+                Models.Response.TarefasResponse res = conversor.converterTb(tarefa);
+                return res;
+            }
+            catch(System.Exception msg){
+
+                return new BadRequestObjectResult(
+                    new Models.ErrorResponse(msg.Message, 400)
+                );
+            }
+        }
     }
 }
