@@ -44,5 +44,13 @@ namespace backend.Database
             ctx.SaveChanges();
             return tarefa;
         }
+
+        public void excluirTarefa(int idtarefa){
+
+            Models.TbTarefa tarefa = ctx.TbTarefas.First(x => x.IdTarefa == idtarefa);
+            
+            ctx.TbTarefas.Remove(tarefa);
+            ctx.SaveChanges();
+        }
     }
 }

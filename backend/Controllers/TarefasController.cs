@@ -65,5 +65,22 @@ namespace backend.Controllers
                 );
             }
         }
+
+        [HttpDelete("delete-tarefa/{idcategoria}/{idtarefa}")]
+        public ActionResult<Models.Response.SuccessResponse> apagarTarefa(int idcategoria, int idtarefa){
+
+            try{
+                Business.ApagarTarefaBusiness validacoes = new Business.ApagarTarefaBusiness();
+                validacoes.deletartarefa(idtarefa, idcategoria);
+
+                return new Models.Response.SuccessResponse("Deletado com sucesso!", 200);
+            }
+            catch(System.Exception msg){
+
+                return new BadRequestObjectResult(
+                    new Models.ErrorResponse(msg.Message, 400)
+                );
+            }
+        }
     }
 }
