@@ -24,18 +24,17 @@ body{
 }
 
 .bloco{
-    max-height: 60%;
+    max-height: 70%;
     min-height: 55%;
-    width: 70%;
+    width: 90%;
 
-    justify-content: space-around;
+    justify-content: space-evenly;
     display: flex;
     align-items: center;
 }
 
-.parte1, .parte2{
+.parte1, .parte2, .parte3{
     max-height: 90%;
-    height: auto;
-    width: 35%;
-    border: 1px solid black;
+    max-width: 28%;
+    margin: 1%;
 }
