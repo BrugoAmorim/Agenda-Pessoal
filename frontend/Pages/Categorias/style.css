@@ -62,8 +62,9 @@ body{
     width: 35%;
     padding: 1%;
     margin: 1%;
-    align-items: center;
+
     display: flex;
+    align-items: flex-start;
     justify-content: center;
 }
 
