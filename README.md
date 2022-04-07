@@ -2,8 +2,7 @@
 Agenda Pessoal, sistema feito para organizar a rotina de seus usuários
 
 Projeto feito para fixar conhecimentos já aprendidos. Neste sistema eu pretendo ir adicionando mais coisas a longo prazo, é pra realmente ser uma agenda pessoal,
-aonde o usuário poderá salvar contatos, escrever textos em blocos de notas e criar listas de tarefas. Cada usuário terá sua agenda própria necessitando logar no sistema, isso 
-será adicionado futuramente, enquanto isso vou fazendo uma parte de cada vez.
+aonde o usuário poderá salvar contatos, escrever textos em blocos de notas e criar listas de tarefas. Cada usuário terá sua agenda própria necessitando logar no sistema, isso será adicionado futuramente, enquanto isso vou fazendo uma parte de cada vez.
 
 ## Ferramentas Utilizadas:
 
@@ -15,10 +14,10 @@ será adicionado futuramente, enquanto isso vou fazendo uma parte de cada vez.
 
 ## Home
 
-<strong> Tela inicial -</strong> Aqui o usuário poderá escolher em qual das funcionalidades do sistema ele irá entrar.
+<strong> Tela inicial -</strong> Aqui o usuário poderá escolher em qual das funcionalidades do sistema ele irá entrar. Pretendo ir adicionando mais coisas ao longo do tempo.
 
 <div align="center" display="flex">
-   <img src=https://user-images.githubusercontent.com/87936511/158595026-b3d50beb-4add-41c7-837a-270448259388.png />
+   <img src=https://user-images.githubusercontent.com/87936511/162103493-7b6c4aae-bca3-4c8d-8d9b-5f1d10294651.png />
 </div>
 
 ## Parte 1 - Agenda de contatos
@@ -97,6 +96,14 @@ Rascunho das telas que terá no sistema de bloco de notas, apenas para terem uma
 </div>
 
 ## Parte 3 - Lista de Tarefas
+
+<strong> Tela Categorias -</strong> Nesta tela o usuário pode ver todas as categorias que estão em seu sistema. As categorias funcionam como especies de grupos, aonde cada uma pode conter diferentes tipos de tarefas, como a categoria estudos, ela agruparia todas as coisas que o usuário precisa fazer em relação aos seus estudos.
+
+Está tela também contêm a opção de: adicionar categorias, excluir categorias já existentes, editar as informações e salvá-las clicando sobre o icone de disquete e por fim, você pode ver as tarefas que estão nesse grupo, para isso basta apenas clicar sobre o icone do olho que você será redirecionado para outra página que tem essas informações.
+
+<div align="center">
+  <img src=https://user-images.githubusercontent.com/87936511/162103482-5f34304b-600f-4b47-aeda-a4d6c7414cd1.png />
+</div>
 
 ## Protótipo
 
