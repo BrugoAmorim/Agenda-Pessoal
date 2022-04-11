@@ -100,7 +100,7 @@ body{
     align-items: center;
     justify-content: center;
     background-color: white;
-    
+    outline: none;
 }
 
 .evento-voltar:hover{
@@ -197,6 +197,7 @@ body{
     border: none;
     background-color: transparent;
     border-radius: 8px;
+    outline: none;
 }
 
 .evento-adicionar:hover{

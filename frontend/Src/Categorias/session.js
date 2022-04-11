@@ -1,5 +1,23 @@
 
-export function retornarObjeto(param){
+import { carregarListas } from './main.js';
+
+let btnAdicionar = document.getElementById("btnAdicionar");
+let conjunto = document.getElementById("Conjunto");
+
+btnAdicionar.onclick = () => {
+
+    while(conjunto.firstChild){
+        conjunto.removeChild(conjunto.firstChild);
+    }
+
+    window.onload = carregarListas();
+    
+    let Categoria = IncrementarObjeto();
+    conjunto.appendChild(Categoria.formato);
+}
+
+
+export function IncrementarObjeto(param){
 
     let objeto = document.createElement('div');
     let info = document.createElement('div');
@@ -10,12 +28,14 @@ export function retornarObjeto(param){
 
     let inpTitulo = document.createElement('input');
     inpTitulo.classList.add('form-control');
+    inpTitulo.placeholder = "Nome da Categoria"
     inpTitulo.value = param.categoria;
 
     let txtareaDesc = document.createElement('textarea');
     txtareaDesc.classList.add('form-control');
+    txtareaDesc.placeholder = "Eu preciso fazer...";
     txtareaDesc.value = param.descricao;
-
+    
     let btnVer = document.createElement('button');
     let btnSalvar = document.createElement('button');
     let btnApagar = document.createElement('button');
@@ -75,5 +95,14 @@ export function retornarObjeto(param){
     objeto.appendChild(info);
     objeto.classList.add('objeto');
 
-    return objeto;
+
+    let ComponentesObj = {
+        id: param.idcategoria,
+        nome: inpTitulo,
+        desc: txtareaDesc,
+        formato: objeto,
+        evento: btnSalvar
+    };
+
+    return ComponentesObj;
 }
