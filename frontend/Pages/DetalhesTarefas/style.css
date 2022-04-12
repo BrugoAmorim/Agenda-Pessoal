@@ -1,0 +1,268 @@
+body{
+    height: 100vh;
+    background-image: linear-gradient(teal, #20c997);
+}
+
+.container{
+    height: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.sub-container{
+    height: 90%;
+    width: 90%;
+
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.container-informacoes{
+    height: 95%;
+    width: 35%;
+
+    border-radius: 8px;
+    background-color: white;
+
+    margin: 1%;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.titulo{
+    height: auto;
+    max-height: 20%;
+    width: 90%;
+
+    display: block;
+    overflow-y: auto;
+    text-align: center;
+
+    border-bottom: 1px solid silver;
+}
+
+.descricao{
+    height: 60%;
+    max-height: 60%;
+    width: 90%;
+
+    display: block;
+    overflow-y: auto;
+
+    text-align: center;
+}
+
+.evento{
+    height: 10%;
+    width: 90%;
+}
+
+.btnevento-voltar{
+    width: 100%;
+    height: 100%;
+
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    background-color: transparent;
+}
+
+.btnevento-voltar:hover{
+    transition: 0.2s;
+    background-color: rgba(0, 0, 0, 0.13);
+}
+
+.container-tarefas{
+    height: 95%;
+    width: 60%;
+    background-color: white;
+
+    margin: 1%;
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.container-eventos{
+    height: 12%;
+    width: 90%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.filtrar{
+    height: 100%;
+    width: 35%;
+    padding: 2%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.adicionar{
+    height: 100%;
+    width: 25%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bloco-tarefas{
+    height: 80%;
+    width: 90%;
+
+    display: block;
+    overflow-y: auto;
+}
+
+.sub-bloco-tarefas{
+    height: 100%;
+    display: block;
+    overflow-y: auto;
+}
+
+/* bloco de informacoes, as propriedades que guardam as informacoes da tarefa se encontram a partir daqui */
+.objeto-tarefa{
+    height: 35%;
+    width: 95%;
+    margin: 1%;
+
+    display: flex;
+    flex-direction: column;
+
+    border-bottom: 1px solid silver;
+}
+
+.entradas{
+    height: 60%;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.entradas textarea{
+    height: 90%;
+    width: 90%;
+    margin: 1%;
+}
+
+.expecificacoes{
+    height: 40%;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.informacoes{
+    width: 95%;
+    height: 95%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.prioridade-salvar{
+    height: 100%;
+    width: 30%;
+
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.prioridade{
+    height: 65%;
+    min-width: 40%;
+    margin: 1%;
+
+    border-radius: 6px;
+}
+
+.btn-salvar{
+    border: none;
+    outline: none;
+    background-color: transparent;
+
+    border-radius: 6px;
+    margin: 1%;
+}
+
+.btn-salvar:hover{
+    transition: 0.4s;
+    background-color: rgba(0, 0, 0, 0.13);
+}
+
+.dtcriado-excluir{
+    height: 100%;
+    width: 50%;
+
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.dtcriado{
+    height: 95%;
+    min-width: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    font-size: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+    border-left: 1px solid silver;
+}
+
+.excluir{
+    height: 95%;
+    min-width: 25%;
+    max-width: 30%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-excluir{
+    height: 90%;
+    width: 80%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    outline: none;
+    background: transparent;
+    border-radius: 6px;
+}
+
+.btn-excluir:hover{
+    transition: 0.4s;
+    background-color: rgba(0, 0, 0, 0.13);
+}
