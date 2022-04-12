@@ -1,5 +1,6 @@
 
 import { carregarListas } from './main.js';
+import { salvarCategoria } from './inserirEatualizar.js'
 
 let btnAdicionar = document.getElementById("btnAdicionar");
 let conjunto = document.getElementById("Conjunto");
@@ -14,8 +15,27 @@ btnAdicionar.onclick = () => {
     
     let Categoria = IncrementarObjeto();
     conjunto.appendChild(Categoria.formato);
-}
 
+    // metodo que vai permitir salvar novas categorias, a propriedade 'eventoSalvar' existe apenas para novos registro e portanto registros já existentes não conseguem acessar essa propriedade
+    Categoria.eventoSalvar.onclick = () => {
+
+        let titulo = Categoria.nome;
+        Categoria.nome.value = titulo.value;
+
+        let descricao = Categoria.desc;
+        Categoria.desc.value = descricao.value;
+
+        let caixote = salvarCategoria(titulo.value, descricao.value);
+        caixote.then(x => {
+
+            if(x.codigo == 400)
+                swal("Algo deu errado! 😵", x.mensagem, "error");
+            else
+                swal("Registro Salvo! 🤩", "A categoria '" + x.categoria + "' já foi salva", "success");
+        })
+
+    }
+}
 
 export function IncrementarObjeto(param){
 
@@ -29,12 +49,10 @@ export function IncrementarObjeto(param){
     let inpTitulo = document.createElement('input');
     inpTitulo.classList.add('form-control');
     inpTitulo.placeholder = "Nome da Categoria"
-    inpTitulo.value = param.categoria;
 
     let txtareaDesc = document.createElement('textarea');
     txtareaDesc.classList.add('form-control');
     txtareaDesc.placeholder = "Eu preciso fazer...";
-    txtareaDesc.value = param.descricao;
     
     let btnVer = document.createElement('button');
     let btnSalvar = document.createElement('button');
@@ -97,12 +115,22 @@ export function IncrementarObjeto(param){
 
 
     let ComponentesObj = {
-        id: param.idcategoria,
         nome: inpTitulo,
         desc: txtareaDesc,
-        formato: objeto,
-        evento: btnSalvar
+        formato: objeto
     };
+
+    // caso haja algum parametro fornecido, este codigo instaciará atributos ao objeto que contem estes valores
+    if(param != undefined){
+
+        ComponentesObj.id = param.idcategoria;
+        ComponentesObj.nome.value = param.categoria;
+        ComponentesObj.desc.value = param.descricao;
+        ComponentesObj.eventoAtualizar = btnSalvar;
+    }
+    else{
+        ComponentesObj.eventoSalvar = btnSalvar;
+    }
 
     return ComponentesObj;
 }

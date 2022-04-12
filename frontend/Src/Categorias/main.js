@@ -30,15 +30,15 @@ export async function carregarListas(){
             // apos isso, o obj chama o atributo que contem o valor do input desc que, acaba copiando os valores da variavel descricao
             obj.desc = descricao.value;
 
-            obj.evento.addEventListener("click", function(){
+            obj.eventoAtualizar.addEventListener("click", function(){
                 
                 let caixote = atualizarCategoria(obj.id, titulo.value, descricao.value);
                 caixote.then(cxt => {
 
                     if(cxt.codigo == 400)
-                        swal("Algo deu errado!", cxt.mensagem, "error");
+                        swal("Algo deu errado! 😵", cxt.mensagem, "error");
                     else
-                        swal("Atualizado com Sucesso!", "", "success");
+                        swal("Atualizado com Sucesso! 🤩", "", "success");
                 })
             })
 
