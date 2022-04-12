@@ -16,7 +16,7 @@ btnAdicionar.onclick = () => {
     let Categoria = IncrementarObjeto();
     conjunto.appendChild(Categoria.formato);
 
-    // metodo que vai permitir salvar novas categorias, a propriedade 'eventoSalvar' existe apenas para novos registro e portanto registros já existentes não conseguem acessar essa propriedade
+    // metodo que vai permitir salvar novas categorias, a propriedade 'eventoSalvar' existe apenas para novos registros e portanto registros já existentes não conseguem acessar essa propriedade
     Categoria.eventoSalvar.onclick = () => {
 
         let titulo = Categoria.nome;
@@ -54,22 +54,9 @@ export function IncrementarObjeto(param){
     txtareaDesc.classList.add('form-control');
     txtareaDesc.placeholder = "Eu preciso fazer...";
     
-    let btnVer = document.createElement('button');
     let btnSalvar = document.createElement('button');
-    let btnApagar = document.createElement('button');
-
-    let imgVer = document.createElement('img');
     let imgSalvar = document.createElement('img');
-    let imgApagar = document.createElement('img');
-
-    // imagem da lixeira, com tamanho de 35em
-    imgApagar.src = "../../Images/icone-apagar.png";
-    imgApagar.alt = "possivel imagem de uma lixeira";
-    imgApagar.height = '35';
-    // o botao apagar inseri a img lixeira dentro de seu escopo
-    btnApagar.appendChild(imgApagar);
-    btnApagar.classList.add('evento-apagar');
-
+    
     // imagem de salvar, com tamanho de 35em
     imgSalvar.src = "../../Images/icone-salvar.png";
     imgSalvar.alt = "imagem de um disquete";
@@ -80,19 +67,9 @@ export function IncrementarObjeto(param){
 
     // o container pega esses dois eventos e os inseri dentro de seu escopo
     containereventos.appendChild(btnSalvar);
-    containereventos.appendChild(btnApagar);
     containereventos.classList.add('container-eventos');
 
-    // icone ver, com o tamaho de 35em
-    imgVer.src = "../../Images/icone-ver.png";
-    imgVer.alt = "possivelmente uma imagem de um olho";
-    imgVer.height = '35';
-    // o botao ver, inseri dentro de seu escopo o icone ver
-    btnVer.appendChild(imgVer);
-    btnVer.classList.add('evento-ver');
-
     // div que contem todos os eventos do objeto
-    eventos.appendChild(btnVer);
     eventos.appendChild(containereventos);
     eventos.classList.add('eventos');
 
@@ -120,13 +97,42 @@ export function IncrementarObjeto(param){
         formato: objeto
     };
 
-    // caso haja algum parametro fornecido, este codigo instaciará atributos ao objeto que contem estes valores
+    // caso haja algum parametro fornecido, este codigo instaciará novos atributos e tags ao elemento
     if(param != undefined){
 
+        let btnVer = document.createElement('button');
+        let imgVer = document.createElement('img');
+        
+        // icone ver, com o tamaho de 35em
+        imgVer.src = "../../Images/icone-ver.png";
+        imgVer.alt = "possivelmente uma imagem de um olho";
+        imgVer.height = '35';
+        // o botao ver, inseri dentro de seu escopo o icone ver
+        btnVer.appendChild(imgVer);
+        btnVer.classList.add('evento-ver');
+        
+        // div que contem todos os eventos do objeto
+        eventos.appendChild(btnVer);
+
+        let btnApagar = document.createElement('button');
+        let imgApagar = document.createElement('img');
+
+        // imagem da lixeira, com tamanho de 35em
+        imgApagar.src = "../../Images/icone-apagar.png";
+        imgApagar.alt = "possivel imagem de uma lixeira";
+        imgApagar.height = '35';
+        // o botao apagar inseri a img lixeira dentro de seu escopo
+        btnApagar.appendChild(imgApagar);
+        btnApagar.classList.add('evento-apagar');
+        
+        containereventos.appendChild(btnApagar);
+
+        // atributos que serao fornecidos caso haja algum parametro
         ComponentesObj.id = param.idcategoria;
         ComponentesObj.nome.value = param.categoria;
         ComponentesObj.desc.value = param.descricao;
         ComponentesObj.eventoAtualizar = btnSalvar;
+        ComponentesObj.eventoApagar = btnApagar;
     }
     else{
         ComponentesObj.eventoSalvar = btnSalvar;

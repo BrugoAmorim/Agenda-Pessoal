@@ -1,4 +1,4 @@
-
+import { confirmarExclusao } from './apagarCategoria.js';
 import { atualizarCategoria } from './inserirEatualizar.js'
 import { IncrementarObjeto } from './session.js'
 
@@ -42,6 +42,10 @@ export async function carregarListas(){
                 })
             })
 
+            obj.eventoApagar.addEventListener("click", function(){
+
+                confirmarExclusao(obj.id);
+            })
         })
     })
 }

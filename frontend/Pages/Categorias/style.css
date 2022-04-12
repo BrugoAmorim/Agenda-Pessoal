@@ -180,8 +180,9 @@ body{
     margin: 1%;
 
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    flex-direction: row;
+    align-items: flex-start;
 }
 
 .centro{
@@ -198,6 +199,7 @@ body{
     background-color: transparent;
     border-radius: 8px;
     outline: none;
+    
 }
 
 .evento-adicionar:hover{
@@ -206,15 +208,15 @@ body{
 }
 
 .container-eventos{
-    width: 55%;
+    width: 30%;
     display: flex;
     align-items: center;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-between;
 }
 
 .evento-salvar{
-    width: 30%;
+    width: 55%;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -223,13 +225,13 @@ body{
 }
 
 .evento-salvar:hover{
-    background-color: rgba(0, 0, 0, 0.048);
+    background-color: rgba(15, 8, 8, 0.048);
     border-radius: 8px;
     transition: 0.2s;
 }
 
 .evento-apagar{
-    width: 30%;
+    width: 55%;
     align-items: center;
     justify-content: center;
     display: flex;
