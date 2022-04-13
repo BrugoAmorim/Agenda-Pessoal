@@ -31,31 +31,31 @@
                     <div class="filtrar">
                         <select class="form-select">
                             <option select>Prioridade</option>
-                            <option value="">1</option>
-                            <option value="">2</option>
-                            <option value="">3</option>
-                            <option value="">4</option>
-                            <option value="">5</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
                         </select>
                     </div>
                     <div class="adicionar">
-                        <button class="btn btn-outline-success">Nova Tarefa</button>
+                        <button class="btn btn-outline-success" id="novaTarefa">Nova Tarefa</button>
                     </div>
                 </div>
                 <div class="bloco-tarefas">
-                    <div class="sub-bloco-tarefas">
-                        <!-- objeto com as informacoes da tarefa -->
-                        <div class="objeto-tarefa">
-                            <div class="entradas">
-                                <input type="checkbox" class="form-check-input">
-                                <textarea class="form-control" cols="30" rows="5" placeholder="Eu preciso fazer..."></textarea>
+                    <div class="sub-bloco-tarefas" id="sub-bloco-tarefas">
+                        
+                        <!-- estrutura das tags, para uma melhor compreensao
+                        <div name="objeto-tarefa">
+                            <div name="entradas">
+                                <input type="checkbox" name="form-check-input">
+                                <textarea name="form-control"></textarea>
                             </div>
-                            <div class="expecificacoes">
-                                <div class="informacoes">
-                                    <div class="prioridade-salvar">
-                                        <div class="prioridade">
-                                            <select class="form-select">
-                                                <option value="5">1</option>
+                            <div name="expecificacoes">
+                                <div name="informacoes">
+                                    <div name="prioridade-salvar">
+                                        <div name="prioridade">
+                                            <select name="form-select">
                                                 <option value="">1</option>
                                                 <option value="">2</option>
                                                 <option value="">3</option>
@@ -63,16 +63,16 @@
                                                 <option value="">5</option>
                                             </select>
                                         </div>
-                                        <button class="btn-salvar">
+                                        <button name="btn-salvar">
                                             <img src="../../Images/icone-salvar.png" height="45em" alt="imagem de disquete">
                                         </button>
                                     </div>
-                                    <div class="dtcriado-excluir">
-                                        <div class="dtcriado">
+                                    <div name="dtcriado-excluir">
+                                        <div name="dtcriado">
                                             01/01/0001
-                                        </div>
-                                        <div class="excluir">
-                                            <button class="btn-excluir">
+                                        </div>  
+                                        <div name="excluir">
+                                            <button name="btn-excluir">
                                                 <img src="../../Images/icone-apagar.png" height="35em" alt="icone de lixeira">
                                             </button>
                                         </div>
@@ -80,10 +80,12 @@
                                 </div>
                             </div>
                         </div>
+                        -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script src="../../Src/Tarefas/main.js" type="module"></script>
 </body>
 </html>
