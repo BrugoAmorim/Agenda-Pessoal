@@ -37,7 +37,7 @@ export function RemoverInfoTemporarias(){
     window.location.href = "../BlocodeNotas/index.html";
 }
 
-function ConversorMes(data){
+export function ConversorMes(data){
 
     let modelo;
 

@@ -1,4 +1,6 @@
 
+import { ConversorMes } from "../BlocoNotas/exportar.js";
+
 export let criarObjeto = (param) => {
 
     // variavel que guarda a div principal, nome 'objeto-tarefa', ela guarda as variaveis 'entradas' e 'expecificacoes' 
@@ -36,16 +38,6 @@ export let criarObjeto = (param) => {
     let Nivel = document.createElement('select');
     Nivel.classList.add("form-select");
 
-    // metodo para adicionar os niveis de prioridade na variavel 'Nivel'
-    for(let i = 1; i <= 5; i++){
-
-        let opcao = document.createElement('option');
-        opcao.appendChild(document.createTextNode(i));
-        opcao.value = i;
-
-        Nivel.appendChild(opcao);
-    }
-
     let btnSalvar = document.createElement('button');
     btnSalvar.classList.add("btn-salvar");
 
@@ -53,25 +45,6 @@ export let criarObjeto = (param) => {
     imgDisquete.src = "../../Images/icone-salvar.png";
     imgDisquete.alt = "imagem de disquete";
     imgDisquete.height = "45";
-
-    // div com o nome 'dtcriado-excluir'
-    let dtCriadoExcluir = document.createElement('div');
-    dtCriadoExcluir.classList.add("dtcriado-excluir");
-
-    let dtCriado = document.createElement('div');
-    dtCriado.classList.add("dtcriado");
-    dtCriado.appendChild(document.createTextNode("01/01/0001"));
-
-    let Excluir = document.createElement('div');
-    Excluir.classList.add("excluir");
-
-    let btnExcluir = document.createElement('button');
-    btnExcluir.classList.add("btn-excluir");
-
-    let imgExcluir = document.createElement('img');
-    imgExcluir.src = "../../Images/icone-apagar.png";
-    imgExcluir.alt = "icone de lixeira";
-    imgExcluir.height = "35";
 
     // tags inserindo tags, começando das mais importantes, até as menos relevantes
     
@@ -84,7 +57,6 @@ export let criarObjeto = (param) => {
     expecificacoes.appendChild(informacoes);
 
     informacoes.appendChild(PrioridadeSalvar);
-    informacoes.appendChild(dtCriadoExcluir);
     
     PrioridadeSalvar.appendChild(prioridade);
     PrioridadeSalvar.appendChild(btnSalvar);
@@ -92,11 +64,76 @@ export let criarObjeto = (param) => {
     prioridade.appendChild(Nivel);
     btnSalvar.appendChild(imgDisquete);
 
-    dtCriadoExcluir.appendChild(dtCriado);
-    dtCriadoExcluir.appendChild(Excluir);
+    // se houver algum parametro, o sistema criará estas estruturas e atribuirá valores as entradas
+    if(param != undefined){
+
+        // divs que copiaram os valores do parametro fornecido
+        if(param.concluida == true)
+            checkbox.checked = true;
+        else
+            checkbox.checked = false;
+
+        textarea.value = param.tarefa;
+
+        let vlPrioridade = document.createElement('option');
+        vlPrioridade.value = param.prioridade;
+        vlPrioridade.appendChild(document.createTextNode(param.prioridade));
+
+        vlPrioridade.selected = true;
+        Nivel.appendChild(vlPrioridade);
+        
+        // metodo para adicionar os niveis de prioridade na variavel 'Nivel'
+        for(let i = 1; i <= 5; i++){
+
+            let opcao = document.createElement('option');
+            opcao.appendChild(document.createTextNode(i));
+            opcao.value = i;
+
+            Nivel.appendChild(opcao);
+        }
+
+        // div com o nome 'dtcriado-excluir'
+        let dtCriadoExcluir = document.createElement('div');
+        dtCriadoExcluir.classList.add("dtcriado-excluir");
+
+        let dtCriado = document.createElement('div');
+        dtCriado.classList.add("dtcriado");
+
+        let data = new Date(param.adicionado);
+        let formatoTexto = ConversorMes(data);
+        dtCriado.appendChild(document.createTextNode(formatoTexto));
+
+        let Excluir = document.createElement('div');
+        Excluir.classList.add("excluir");
+
+        let btnExcluir = document.createElement('button');
+        btnExcluir.classList.add("btn-excluir");
+
+        let imgExcluir = document.createElement('img');
+        imgExcluir.src = "../../Images/icone-apagar.png";
+        imgExcluir.alt = "icone de lixeira";
+        imgExcluir.height = "35";
+
+        informacoes.appendChild(dtCriadoExcluir);
+
+        dtCriadoExcluir.appendChild(dtCriado);
+        dtCriadoExcluir.appendChild(Excluir);
+
+        Excluir.appendChild(btnExcluir);
+        btnExcluir.appendChild(imgExcluir);
+    }
+    else{
     
-    Excluir.appendChild(btnExcluir);
-    btnExcluir.appendChild(imgExcluir);
+        // metodo para adicionar os niveis de prioridade na variavel 'Nivel'
+        for(let i = 1; i <= 5; i++){
+
+            let opcao = document.createElement('option');
+            opcao.appendChild(document.createTextNode(i));
+            opcao.value = i;
+
+            Nivel.appendChild(opcao);
+        }
+    }
 
     return objetoTarefa;
 }
