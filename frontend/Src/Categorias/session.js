@@ -48,10 +48,12 @@ export function IncrementarObjeto(param){
 
     let inpTitulo = document.createElement('input');
     inpTitulo.classList.add('form-control');
+    inpTitulo.maxLength = 100;
     inpTitulo.placeholder = "Nome da Categoria"
 
     let txtareaDesc = document.createElement('textarea');
     txtareaDesc.classList.add('form-control');
+    txtareaDesc.maxLength = 300;
     txtareaDesc.placeholder = "Eu preciso fazer...";
     
     let btnSalvar = document.createElement('button');
@@ -133,6 +135,7 @@ export function IncrementarObjeto(param){
         ComponentesObj.desc.value = param.descricao;
         ComponentesObj.eventoAtualizar = btnSalvar;
         ComponentesObj.eventoApagar = btnApagar;
+        ComponentesObj.eventoVer = btnVer;
     }
     else{
         ComponentesObj.eventoSalvar = btnSalvar;

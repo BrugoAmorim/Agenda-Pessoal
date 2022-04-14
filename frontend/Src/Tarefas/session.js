@@ -64,6 +64,18 @@ export let criarObjeto = (param) => {
     prioridade.appendChild(Nivel);
     btnSalvar.appendChild(imgDisquete);
 
+    // objeto instanciado para guardar valores que serão utilizados futuramente
+    let Parametros = {
+
+        formato: objetoTarefa,
+        salvar: btnSalvar,
+        info: {
+            tarefa: textarea,
+            feito: checkbox,
+            prioridade: Nivel
+        }
+    };
+
     // se houver algum parametro, o sistema criará estas estruturas e atribuirá valores as entradas
     if(param != undefined){
 
@@ -76,21 +88,10 @@ export let criarObjeto = (param) => {
         textarea.value = param.tarefa;
 
         let vlPrioridade = document.createElement('option');
-        vlPrioridade.value = param.prioridade;
         vlPrioridade.appendChild(document.createTextNode(param.prioridade));
 
         vlPrioridade.selected = true;
         Nivel.appendChild(vlPrioridade);
-        
-        // metodo para adicionar os niveis de prioridade na variavel 'Nivel'
-        for(let i = 1; i <= 5; i++){
-
-            let opcao = document.createElement('option');
-            opcao.appendChild(document.createTextNode(i));
-            opcao.value = i;
-
-            Nivel.appendChild(opcao);
-        }
 
         // div com o nome 'dtcriado-excluir'
         let dtCriadoExcluir = document.createElement('div');
@@ -121,19 +122,22 @@ export let criarObjeto = (param) => {
 
         Excluir.appendChild(btnExcluir);
         btnExcluir.appendChild(imgExcluir);
+
+        // novos atributos, um que contem o id da tarefa e o outro valor possui a estrutura do evento excluir
+        Parametros.info.idtarefa = param.idtarefa;
+        Parametros.excluir = btnExcluir;
     }
-    else{
-    
-        // metodo para adicionar os niveis de prioridade na variavel 'Nivel'
-        for(let i = 1; i <= 5; i++){
+    else checkbox.disabled = true; // o checkbox é desabilitado caso não haja parametros, pois seria um nova tarefa
 
-            let opcao = document.createElement('option');
-            opcao.appendChild(document.createTextNode(i));
-            opcao.value = i;
+    // metodo para adicionar os niveis de prioridade na variavel 'Nivel'
+    for(let i = 1; i <= 5; i++){
 
-            Nivel.appendChild(opcao);
-        }
+        let opcao = document.createElement('option');
+        opcao.appendChild(document.createTextNode(i));
+        opcao.value = i;
+
+        Nivel.appendChild(opcao);
     }
 
-    return objetoTarefa;
+    return Parametros;
 }

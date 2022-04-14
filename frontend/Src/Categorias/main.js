@@ -40,12 +40,21 @@ export async function carregarListas(){
                     else
                         swal("Atualizado com Sucesso! 🤩", "", "success");
                 })
-            })
+            });
 
             obj.eventoApagar.addEventListener("click", function(){
 
                 confirmarExclusao(obj.id);
-            })
+            });
+
+            obj.eventoVer.addEventListener("click", function(){
+
+                localStorage.setItem("idcategoria", obj.id);
+                localStorage.setItem("titulo", obj.nome);
+                localStorage.setItem("descricao", obj.desc);
+
+                window.location.href = "../../Pages/DetalhesTarefas/index.html";
+            });
         })
     })
 }
