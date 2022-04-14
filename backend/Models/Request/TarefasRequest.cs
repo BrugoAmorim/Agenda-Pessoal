@@ -8,5 +8,6 @@ namespace backend.Models.Request
     public class TarefasRequest
     {
         public string tarefa {get;set;}
+        public int prioridade {get;set;}
     }
 }

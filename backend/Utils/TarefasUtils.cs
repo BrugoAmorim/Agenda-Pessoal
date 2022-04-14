@@ -13,7 +13,7 @@ namespace backend.Utils
             obj.DsTarefa = req.tarefa;
             obj.BlConcluida = false;
             obj.DtAdicionado = DateTime.Now;
-            obj.VlPrioridade = 1;
+            obj.VlPrioridade = req.prioridade;
             obj.IdCategoria = idcat;
 
             return obj;
