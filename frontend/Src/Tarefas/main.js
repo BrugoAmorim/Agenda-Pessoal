@@ -1,8 +1,8 @@
 
 import { criarObjeto } from "./session.js";
-import { salvarTarefa } from './postAndupdate.js';
+import { salvarTarefa, atualizarTarefa } from './postAndupdate.js';
 
-let id = localStorage.getItem("idcategoria");
+let idLista = localStorage.getItem("idcategoria");
 
 let blocoTarefas = document.getElementById("sub-bloco-tarefas");
 let btnNvTarefa = document.getElementById("novaTarefa");
@@ -28,10 +28,10 @@ btnNvTarefa.onclick = () => {
             prioridade: nivel
         };
 
-        salvarTarefa(req, id);
+        salvarTarefa(req, idLista);
     });
 
-    buscarTarefas(id);
+    buscarTarefas(idLista);
 }
 
 async function buscarTarefas(idcategoria){
@@ -51,16 +51,18 @@ async function buscarTarefas(idcategoria){
             let modelo = criarObjeto(obj);
             blocoTarefas.appendChild(modelo.formato);
 
+            // quando o usuario for atualizar a sua tarefa, este evento será acionado
             modelo.salvar.addEventListener("click", function(){
 
-                window.alert(modelo.informacoes.tarefa.value);
+                atualizarTarefa(idLista, modelo.info.idtarefa, modelo.info);
             })
 
+            // se o cliente for excluir uma tarefa, este evento será chamado
             modelo.excluir.addEventListener("click", function(){
 
                 console.log("seu id é: " + modelo.info.idtarefa);
                 console.log(modelo.info.prioridade.value);
-            })  
+            })
         })
     })
 }
@@ -74,6 +76,7 @@ btnVoltar.onclick = () => {
 
     window.location.href = "../../Pages/Categorias/index.html";
 }
+
 window.onload = () => {
 
     let titulo = localStorage.getItem("titulo");
@@ -85,5 +88,5 @@ window.onload = () => {
     vlTitulo.appendChild(document.createTextNode(titulo));
     vlDesc.appendChild(document.createTextNode(desc));
 
-    buscarTarefas(id);
+    buscarTarefas(idLista);
 }
