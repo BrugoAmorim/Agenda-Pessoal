@@ -6,6 +6,7 @@ let idLista = localStorage.getItem("idcategoria");
 
 let blocoTarefas = document.getElementById("sub-bloco-tarefas");
 let btnNvTarefa = document.getElementById("novaTarefa");
+let selectPrioridade = document.getElementById("Prioridade");
 
 btnNvTarefa.onclick = () => {
 
@@ -31,12 +32,13 @@ btnNvTarefa.onclick = () => {
         salvarTarefa(req, idLista);
     });
 
-    buscarTarefas(idLista);
+    buscarTarefas(idLista, selectPrioridade.value);
 }
 
-async function buscarTarefas(idcategoria){
+// esta funcionalidade lista as tarefas sem se basear em nada, mandando uma lista na ordem em que foi adicionada as tarefas, das mais antigas para as mais novas
+async function buscarTarefas(idcategoria, prioridade){
 
-    let url = "http://localhost:5000/Tarefas/buscar-tarefas/" + idcategoria;
+    let url = "http://localhost:5000/Tarefas/buscar-tarefas/" + idcategoria + "?prioridade=" + prioridade;
 
     const chamaapi = await fetch(url, {
 
@@ -67,6 +69,15 @@ async function buscarTarefas(idcategoria){
     })
 }
 
+// Se o select for utilizado ele ordernará as tarefas baseada no seu nivel de prioridade
+selectPrioridade.onclick = () => {
+
+    while(blocoTarefas.firstChild)
+    blocoTarefas.removeChild(blocoTarefas.firstChild);
+
+    buscarTarefas(idLista, selectPrioridade.value);
+}
+
 let btnVoltar = document.getElementById("Voltar");
 btnVoltar.onclick = () => {
 
@@ -88,5 +99,5 @@ window.onload = () => {
     vlTitulo.appendChild(document.createTextNode(titulo));
     vlDesc.appendChild(document.createTextNode(desc));
 
-    buscarTarefas(idLista);
+    buscarTarefas(idLista, selectPrioridade.value);
 }
