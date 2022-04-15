@@ -31,14 +31,14 @@ namespace backend.Controllers
         }
 
         [HttpGet("buscar-tarefas/{idcategoria}")]
-        public ActionResult<List<Models.Response.TarefasResponse>> buscarminhastarefas(int idcategoria){
+        public ActionResult<List<Models.Response.TarefasResponse>> buscarminhastarefas(int idcategoria, int prioridade){
 
             try{
-                Business.BuscarTarefasBusiness buscarinfo = new Business.BuscarTarefasBusiness();
-                List<Models.TbTarefa> lst = buscarinfo.validarbusca(idcategoria);
+                Business.BuscarTarefasBusiness buscarInfo = new Business.BuscarTarefasBusiness();
+                List<Models.TbTarefa> lst = buscarInfo.validarbusca(idcategoria, prioridade);
 
-                List<Models.Response.TarefasResponse> objetores = conversor.converterListaTb(lst);
-                return objetores;
+                List<Models.Response.TarefasResponse> objetoRes = conversor.converterListaTb(lst);
+                return objetoRes;
             }
             catch(System.Exception msg){
 
