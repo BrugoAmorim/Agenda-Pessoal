@@ -1,6 +1,7 @@
 
 import { criarObjeto } from "./session.js";
 import { salvarTarefa, atualizarTarefa } from './postAndupdate.js';
+import { confirmarExcluimento } from './delete.js';
 
 let idLista = localStorage.getItem("idcategoria");
 
@@ -62,8 +63,7 @@ async function buscarTarefas(idcategoria, prioridade){
             // se o cliente for excluir uma tarefa, este evento será chamado
             modelo.excluir.addEventListener("click", function(){
 
-                console.log("seu id é: " + modelo.info.idtarefa);
-                console.log(modelo.info.prioridade.value);
+                confirmarExcluimento(idLista, modelo.info.idtarefa);
             })
         })
     })
