@@ -45,8 +45,19 @@ namespace backend.Database
 
         public void excluir(int id){
 
+            List<Models.TbTarefa> tfs = ctx.TbTarefas.Where(x => x.IdCategoria == id).ToList();
+            foreach(Models.TbTarefa item in tfs){
+
+                if(item.IdCategoria == id){
+                    ctx.TbTarefas.Remove(item);
+                    ctx.SaveChanges();
+                }
+                else
+                    continue;
+            }
+
             Models.TbCategoria obj = ctx.TbCategoria.First(x => x.IdCategoria == id);
-            ctx.TbCategoria.RemoveRange(obj);
+            ctx.TbCategoria.Remove(obj);
             ctx.SaveChanges();
         }
     }
