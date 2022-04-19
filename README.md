@@ -97,19 +97,19 @@ Rascunho das telas que terá no sistema de bloco de notas, apenas para terem uma
 
 ## Parte 3 - Lista de Tarefas
 
-<strong> Tela Categorias -</strong> Nesta tela o usuário pode ver todas as categorias que estão em seu sistema. As categorias funcionam como especies de grupos, aonde cada uma pode conter diferentes tipos de tarefas, como a categoria estudos, ela agruparia todas as coisas que o usuário precisa fazer em relação aos seus estudos.
+<strong> Tela Categorias -</strong> Nesta tela o usuário pode ver todas as categorias que estão em seu sistema. As categorias funcionam como especies de grupos, aonde cada uma pode conter diferentes tipos de tarefas, como a categoria 'Estudos Web', ela agruparia todas as coisas que o usuário precisa fazer em relação aos seus estudos.
 
 Está tela também contêm as opções de: adicionar categoria, excluir categorias já existentes, editar as informações e salvá-las clicando sobre o icone de disquete e por fim, você pode ver as tarefas que estão nesse grupo, para isso basta apenas clicar sobre o icone do olho que você será redirecionado para outra página que tem essas informações.
 
 <div align="center">
-  <img src=https://user-images.githubusercontent.com/87936511/163066954-0473f52d-38fe-49b6-a7ee-6a4521061f98.png />
+  <img src=https://user-images.githubusercontent.com/87936511/164012180-7702b869-8a1b-4939-9e1b-65088d5e7d49.png />
 </div>
 
 ## Editar e Excluir
 
 Quando o usuário preenche todos os campos corretamente e depois salva o arquivo, uma mensagem é retornada. Se o usuário quiser excluir uma categoria, basta apenas clicar sobre o icone de lixeira, um aviso será mostrado perguntando se ele quer continuar, clicando em 'sim' a categoria é excluída junto com suas tarefas.
 
-<div style="flex-direction: row;" display="flex">
+<div style="flex-direction: row;" display="flex" align="center">
   <img height="400em" width="530em" src=https://user-images.githubusercontent.com/87936511/163070291-188525bd-98e1-482e-bdff-4a2658a7346f.PNG />
   <img height="400em" width="470em" src=https://user-images.githubusercontent.com/87936511/163070467-99af5f1b-0764-45f4-ac64-fb50a1676d8a.PNG />
 </div>
@@ -118,19 +118,26 @@ Quando o usuário preenche todos os campos corretamente e depois salva o arquivo
 
 Caso o cliente tente salvar uma nova categoria que não possui nome e nem descrição, um erro é retornado ao usuário. E se ele tentar salvar as alterações de uma categoria já existente sem preencher os campos nome e descrição da categoria, a aplicação manda um erro.
 
-<div style="flex-direction: row;" display="flex">
+<div display="flex" align="center">
   <img height="400em" width="500em" src=https://user-images.githubusercontent.com/87936511/163068900-2c5db62e-5efd-4735-b22c-0f980152084d.PNG />
-  <img height="400em" width="500em" src=https://user-images.githubusercontent.com/87936511/163069989-01822b64-8a1e-46e4-8df7-0ef2afc39dff.PNG />
 </div>
 
 ###
 
-<strong> Tela Minhas Tarefas -</strong> Quando o usuário clicar sobre o icone de ver, ele será mandado para está tela, aqui contêm o titulo da categoria, sua descrição e as funcionalidades de consultar, editar, apagar, inserir e filtrar tarefas. Quando o cliente cria uma nova tarefa é possível definir seu nível de prioridade(1 até 5), quanto maior o numero mais importante é a tarefa. Além disso, o sistema conta com um meio de filtragem de tarefas, que filtra pelo nivel de sua prioridade. 
+<strong> Tela Minhas Tarefas -</strong> Quando o usuário clicar sobre o icone de ver, ele será mandado para está tela, aqui contêm o titulo da categoria, sua descrição e as funcionalidades de editar, apagar, inserir e ordenar tarefas. Quando o cliente cria uma nova tarefa é possível definir seu nível de prioridade(1 até 5), quanto maior o numero mais importante é a tarefa. 
 
 É possível ver que as tarefas contam com uma data que, representa o dia em que essa tarefa foi inserida na categoria, quando o usuário conclui-lá, ele pode marcar a meta como feita atráves do checkbox, caso ele veja que não é mais necessário deixar essa tarefa na lista, ele pode simplesmente exclui-lá e por fim, se ele quiser editar o objetivo, para salvar basta apenas clicar sobre a imagem do disquete
 
 <div align="center">
-  <img src=https://user-images.githubusercontent.com/87936511/163066960-4429ff74-c963-4c1f-a191-935639584d5e.png />
+  <img src=https://user-images.githubusercontent.com/87936511/164012496-99328f42-8a5d-4aaf-a9c7-11ae82dc39a3.png />
+</div>
+
+###
+
+Se o usuário tentar salvar uma nova tarefa com um campo vazio, um erro é retornado ao cliente, o mesmo acontece se ele for editar uma tarefa já existente e deixar o campo nulo.
+
+<div align="center">
+  <img src=https://user-images.githubusercontent.com/87936511/164013309-aa2f15bd-4730-44d2-a062-3d47de768fe6.PNG />
 </div>
 
 ## Protótipo
