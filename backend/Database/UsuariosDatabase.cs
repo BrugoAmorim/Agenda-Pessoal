@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+#nullable disable
 namespace backend.Database
 {
     public class UsuariosDatabase
@@ -21,6 +22,13 @@ namespace backend.Database
 
             List<Models.TbUsuario> registros = bd.TbUsuarios.ToList();
             return registros;
+        }
+
+        public Models.TbUsuario infoUser(string userOrmail){
+
+            Models.TbUsuario usuario = bd.TbUsuarios.FirstOrDefault(x => x.NmUsuario == userOrmail || x.DsEmail == userOrmail);
+
+            return usuario;
         }
     }
 }

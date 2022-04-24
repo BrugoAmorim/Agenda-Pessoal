@@ -16,7 +16,6 @@ namespace backend.Business
         public Models.TbUsuario Criarconta(Models.Request.NovaContaRequest req){
 
             List<Models.TbUsuario> usuarios = banco.buscarUsuarios();
-            Models.Request.NovaContaRequest xx = req;
 
             if(usuarios.Any(x => x.DsEmail == req.email) == true)
                 throw new ArgumentException("Já criaram uma conta utilizando este email, por favor tente outro");

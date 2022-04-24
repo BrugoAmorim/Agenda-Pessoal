@@ -31,6 +31,26 @@ namespace backend.Controllers
             }
         }
 
+        [HttpPost("login")]
+        public ActionResult<Models.Response.ContaResponse> loginSistema(string userOrmail, string password){
+
+            try
+            {
+                Business.LoginBusiness validarUser = new Business.LoginBusiness();
+
+                Models.TbUsuario user = validarUser.validarUsuario(userOrmail, password);
+                Models.Response.ContaResponse res = conversor.converterTb(user);
+                return res;
+            }
+            catch (System.Exception msg)
+            {
+                return new BadRequestObjectResult(
+                    new Models.ErrorResponse(msg.Message, 400)
+                );
+            }
+        }
+
+        // funcionalidade apenas para buscas, nao tera no sistema
         [HttpGet]
         public List<Models.TbUsuario> listar(){
 
