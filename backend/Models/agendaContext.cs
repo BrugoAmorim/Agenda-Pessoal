@@ -3,7 +3,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
 #nullable disable
-
 namespace backend.Models
 {
     public partial class agendaContext : DbContext

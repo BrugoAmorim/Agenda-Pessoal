@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 
 #nullable disable
-
 namespace backend.Models
 {
     public partial class TbUsuario
