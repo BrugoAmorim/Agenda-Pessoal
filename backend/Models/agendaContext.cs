@@ -21,6 +21,7 @@ namespace backend.Models
         public virtual DbSet<TbCategoria> TbCategoria { get; set; }
         public virtual DbSet<TbContato> TbContatos { get; set; }
         public virtual DbSet<TbTarefa> TbTarefas { get; set; }
+        public virtual DbSet<TbUsuario> TbUsuarios { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -41,6 +42,8 @@ namespace backend.Models
 
                 entity.ToTable("tb_bloco_nota");
 
+                entity.HasIndex(e => e.IdUsuario, "id_usuario");
+
                 entity.Property(e => e.IdBlocoNota).HasColumnName("id_bloco_nota");
 
                 entity.Property(e => e.DsConteudo)
@@ -55,10 +58,18 @@ namespace backend.Models
                     .HasColumnType("datetime")
                     .HasColumnName("dt_criacao");
 
+                entity.Property(e => e.IdUsuario).HasColumnName("id_usuario");
+
                 entity.Property(e => e.NmBloco)
                     .IsRequired()
                     .HasMaxLength(50)
                     .HasColumnName("nm_bloco");
+
+                entity.HasOne(d => d.IdUsuarioNavigation)
+                    .WithMany(p => p.TbBlocoNota)
+                    .HasForeignKey(d => d.IdUsuario)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("tb_bloco_nota_ibfk_1");
             });
 
             modelBuilder.Entity<TbCategoria>(entity =>
@@ -68,6 +79,8 @@ namespace backend.Models
 
                 entity.ToTable("tb_categoria");
 
+                entity.HasIndex(e => e.IdUsuario, "id_usuario");
+
                 entity.Property(e => e.IdCategoria).HasColumnName("id_categoria");
 
                 entity.Property(e => e.DsCategoria)
@@ -75,10 +88,18 @@ namespace backend.Models
                     .HasMaxLength(300)
                     .HasColumnName("ds_categoria");
 
+                entity.Property(e => e.IdUsuario).HasColumnName("id_usuario");
+
                 entity.Property(e => e.NmCategoria)
                     .IsRequired()
                     .HasMaxLength(100)
                     .HasColumnName("nm_categoria");
+
+                entity.HasOne(d => d.IdUsuarioNavigation)
+                    .WithMany(p => p.TbCategoria)
+                    .HasForeignKey(d => d.IdUsuario)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("tb_categoria_ibfk_1");
             });
 
             modelBuilder.Entity<TbContato>(entity =>
@@ -87,6 +108,8 @@ namespace backend.Models
                     .HasName("PRIMARY");
 
                 entity.ToTable("tb_contato");
+
+                entity.HasIndex(e => e.IdUsuario, "id_usuario");
 
                 entity.Property(e => e.IdContato).HasColumnName("id_contato");
 
@@ -114,10 +137,18 @@ namespace backend.Models
                     .HasMaxLength(9)
                     .HasColumnName("ds_telefone");
 
+                entity.Property(e => e.IdUsuario).HasColumnName("id_usuario");
+
                 entity.Property(e => e.NmContato)
                     .IsRequired()
                     .HasMaxLength(80)
                     .HasColumnName("nm_contato");
+
+                entity.HasOne(d => d.IdUsuarioNavigation)
+                    .WithMany(p => p.TbContatos)
+                    .HasForeignKey(d => d.IdUsuario)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("tb_contato_ibfk_1");
             });
 
             modelBuilder.Entity<TbTarefa>(entity =>
@@ -151,6 +182,35 @@ namespace backend.Models
                     .HasForeignKey(d => d.IdCategoria)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("tb_tarefa_ibfk_1");
+            });
+
+            modelBuilder.Entity<TbUsuario>(entity =>
+            {
+                entity.HasKey(e => e.IdUsuario)
+                    .HasName("PRIMARY");
+
+                entity.ToTable("tb_usuarios");
+
+                entity.Property(e => e.IdUsuario).HasColumnName("id_usuario");
+
+                entity.Property(e => e.DsEmail)
+                    .IsRequired()
+                    .HasMaxLength(100)
+                    .HasColumnName("ds_email");
+
+                entity.Property(e => e.DsSenha)
+                    .IsRequired()
+                    .HasMaxLength(50)
+                    .HasColumnName("ds_senha");
+
+                entity.Property(e => e.DtCriacao)
+                    .HasColumnType("datetime")
+                    .HasColumnName("dt_criacao");
+
+                entity.Property(e => e.NmUsuario)
+                    .IsRequired()
+                    .HasMaxLength(80)
+                    .HasColumnName("nm_usuario");
             });
 
             OnModelCreatingPartial(modelBuilder);

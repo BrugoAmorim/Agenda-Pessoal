@@ -12,5 +12,8 @@ namespace backend.Models
         public string DsConteudo { get; set; }
         public DateTime DtCriacao { get; set; }
         public DateTime DtAtualizado { get; set; }
+        public int IdUsuario { get; set; }
+
+        public virtual TbUsuario IdUsuarioNavigation { get; set; }
     }
 }

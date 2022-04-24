@@ -15,5 +15,8 @@ namespace backend.Models
         public string DsCidade { get; set; }
         public string DsEstado { get; set; }
         public string DsNotas { get; set; }
+        public int IdUsuario { get; set; }
+
+        public virtual TbUsuario IdUsuarioNavigation { get; set; }
     }
 }
