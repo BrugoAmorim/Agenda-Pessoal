@@ -1,0 +1,108 @@
+body{
+    height: 100vh;
+
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url(https://img.freepik.com/fotos-gratis/fundo-azul-do-gradiente-de-luxo-abstrato-liso-azul-escuro-com-vinheta-preta-studio-banner_1258-71897.jpg?w=2000);
+    
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.descSite{
+    height: 100%;
+    width: 35%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Informacoes{
+    height: 75%;
+    width: 90%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    border-radius: 6px;
+    background-color: white;
+}
+
+.blocodescricao{
+    max-height: 95%;
+    width: 100%;
+
+    display: block;
+    overflow-y: auto;
+
+    text-align: center;
+    flex-direction: column;
+}
+
+.Autor{
+    height: 10%;
+    width: 100%;
+    margin: 1%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.Login{
+    height: 100%;
+    width: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logarSistema{
+    height: 60%;
+    width: 60%;
+    border-radius: 6px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: white;
+}
+
+
+.infoUser{
+    height: 60%;
+    width: 90%;
+    
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.Usuario, .Senha{
+    height: 50%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.Eventos{
+    height: 25%;
+    width: 90%;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    text-align: center;
+}
