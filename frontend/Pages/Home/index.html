@@ -4,48 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agenda | Home</title>
+    <title>Home</title>
 
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="shortcut icon" href="../../Images/logo-pag.ico" type="image/x-icon">
 </head>
 <body>
-    <div class="container">
-        <div class="bloco">
-            <div class="parte1 card">
-                <img src="../../Images/menu-inicial-contatos.png" class="card-img-top" alt="página inicial, contatos" height="150em">
-
-                <div class="card-body">
-                    <h5 class="card-title">Contatos</h5>
-                    <p class="card-text">Vá para sua Agenda, um local aonde você pode ver seus contatos.</p>
-                    <a href="../Contatos/index.html" class="btn btn-primary">Entrar</a>
-                </div>
-            </div>
-
-            <div class="parte2 card">
-                <img src="../../Images/menu-inicial-bloco-notas.jpg" class="card-img-top" alt="pagina inicial, bloco de notas" height="150em">
-
-                <div class="card-body">
-                    <h5 class="card-title">Bloco de Notas</h5>
-                    <p class="card-text">Suas anotações, lugar aonde você pode criar pequenos blocos de texto.</p>
-                    <a href="../BlocodeNotas/index.html" class="btn btn-primary">Entrar</a>
-                </div>
-            </div>
-
-            <div class="parte3 card">
-                <img src="../../Images/img-listas-tarefas.jpg" class="card-img-top" alt="pagina inicial, lista de tarefas" height="150em">
-
-                <div class="card-body">
-                    <h5 class="card-title">Lista de Tarefas</h5>
-                    <p class="card-text">Organize as tarefas que precisa fazer, com o gerenciador mais simples e completo que tem.</p>
-                    <a href="../Categorias/index.html" class="btn btn-primary">Entrar</a>
-                </div>
+    <header>
+        <div class="AgendaPessoal">
+            <h1 style="color: white;">Agenda Pessoal</h1>
+        </div>
+        <div class="Usuario">
+            <div class="Informacoes">
+                <span class="lead" style="color: white;">@Nome_Usuario</span>
+                <a href="#" class="lead">Minha conta</a>
+                <a href="#" class="lead">Sair</a>
             </div>
         </div>
-    </div>
-    <div class="container2">
-        <h1 style="color: white;">Agenda Pessoal &copy;2022</h1>
-    </div>
+    </header>
+    <article>
+        <div class="Contatos">
+            <div class="imgContatos">
+                <img src="../../Images/img-lista-contatos.png" height="280em" alt="imagem de uma lista de contatos">
+            </div>
+            <div class="Descricao">
+                <h2>Meus Contatos</h2>
+                <p class="lead">Com esta aplicação você nunca mais perderá seus contatos. Aqui você pode gerenciar os números de telefones e emails de seus familiares, colegas e afins. Fácil, rápido e intuitivo.</p>
+                <button class="btn btn-primary" style="width: 20%;">Entrar</button>
+            </div>
+        </div>
+        <div class="BlocodeNotas">
+            <div class="Descricao">
+                <h2>Minhas Anotações</h2>
+                <p class="lead">Nesta aplicação voce pode escrever seus blocos de texto, faça anotações, monte listas, escreva histórias e muito mais. Aqui você pode gerenciar todos os textos que escreve de maneira rápida e organizada.</p>
+                <button class="btn btn-primary" style="width: 20%;">Entrar</button>
+            </div>
+            <div class="imgNotas">
+                <img src="../../Images/img-anotacoes.png" alt="logo bloco de notas" height="250em" width="250em">
+            </div>
+        </div>
+        <div class="ListaTarefas">
+            <div class="imgTarefas">
+                <img src="../../Images/img-lista-tarefas.jpg" height="300em" width="400em" alt="imagem de uma agenda de tarefas">
+            </div>
+            <div class="Descricao">
+                <h2>Minhas Tarefas</h2>
+                <p class="lead">Está funcionalidade permite que você crie suas metas, cansado de misturar as tarefas do trabalho com as de casa? este problema acabou, pois aqui separamos as tarefas por categorias, para lhe ajudar a não ficar perdido nas atividades do dia a dia.</p>
+                <button class="btn btn-primary" style="width: 20%;">Entrar</button>
+            </div>
+        </div>
+    </article>
+    <footer>
+        <div class="RedesSociais">
+            <span class="lead" style="color: silver;">Todos os direitos reservados &copy;2022, Desenvolvido por</span>
+            <a href="#" class="lead">@BrunoGomes</a>
+        </div>
+    </footer>
 </body>
 </html>

@@ -1,40 +1,152 @@
 body{
-    height: 100vh;
     flex-direction: column;
     display: flex;
-
-    background-image: linear-gradient(silver,silver);
 }
 
-.container{
-    height: 100%;
+header{
+    height: 15vh;
 
-    justify-content: center;
+    display: flex;
     align-items: center;
+    justify-content: space-between;
+
+    background-color: black;
+}
+
+article{
+    height: auto;
+
+    flex-direction: column;
     display: flex;
 }
 
-.container2{
-    height: 15%;
+footer{
+    height: 15vh;
     background-color: black;
 
+    display: flex;
     align-items: center;
     justify-content: center;
-    display: flex;
 }
 
-.bloco{
-    max-height: 70%;
-    min-height: 55%;
-    width: 90%;
+.Contatos{
+    height: 50vh;
+    width: 100%;
+    background-color: #e9e59f;
 
-    justify-content: space-evenly;
     display: flex;
     align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
-.parte1, .parte2, .parte3{
-    max-height: 90%;
-    max-width: 28%;
+.BlocodeNotas{
+    height: 50vh;
+    width: 100%;
+    background-color:#fce185;
+
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.ListaTarefas{
+    height: 50vh;
+    width: 100%;
+    background-color: white;
+
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.imgContatos{
+    height: 100%;
+    width: 40%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgNotas{
+    height: 100%;
+    width: 30%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgTarefas{
+    height: 100%;
+    width: 40%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Descricao{
+    min-height: 80%;
+    width: 40%;
+    padding: 1%;
+
+    display: block;
+    overflow-y: auto;
+
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+
+.Usuario{
+    height: 80%;
+    width: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Informacoes{
+    height: 80%;
+    width: 80%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.Informacoes a{
+    text-decoration: none;
+    outline: none;
+    color: white;
+}
+
+.AgendaPessoal{
+    height: 70%;
+    width: 40%;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 3%;
+}
+
+.RedesSociais{
+    height: 70%;
+    width: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.RedesSociais a{
+    text-decoration: none;
+    outline: none;
     margin: 1%;
 }
