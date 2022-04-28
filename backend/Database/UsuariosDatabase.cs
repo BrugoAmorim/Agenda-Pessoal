@@ -30,5 +30,11 @@ namespace backend.Database
 
             return usuario;
         }
+
+        public Models.TbUsuario buscarUserId(int iduser){
+
+            Models.TbUsuario info = bd.TbUsuarios.FirstOrDefault(x => x.IdUsuario == iduser);
+            return info;
+        }
     }
 }

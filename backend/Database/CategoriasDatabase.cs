@@ -9,16 +9,16 @@ namespace backend.Database
     {
         Models.agendaContext ctx = new Models.agendaContext();
 
-        public List<Models.TbCategoria> listarcategorias(){
+        public List<Models.TbCategoria> listarcategorias(int id){
 
-            List<Models.TbCategoria> colecao = ctx.TbCategoria.ToList();
+            List<Models.TbCategoria> colecao = ctx.TbCategoria.Where(x => x.IdUsuario == id).ToList();
             return colecao;
         }
 
-        public Models.TbCategoria salvarCategoria(Models.Request.CategoriaRequest req){
+        public Models.TbCategoria salvarCategoria(Models.Request.CategoriaRequest req, int iduser){
 
             Utils.CategoriasUtils conversor = new Utils.CategoriasUtils();
-            Models.TbCategoria tb = conversor.converterReq(req);
+            Models.TbCategoria tb = conversor.converterReq(req, iduser);
 
             ctx.TbCategoria.Add(tb);
             ctx.SaveChanges();

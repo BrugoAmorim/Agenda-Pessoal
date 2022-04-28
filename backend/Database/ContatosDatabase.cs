@@ -12,15 +12,15 @@ namespace backend.Database
         Models.agendaContext ctx = new Models.agendaContext();
         Utils.ContatosUtils conversor = new Utils.ContatosUtils();
 
-        public List<Models.TbContato> listacontatos(){
+        public List<Models.TbContato> listacontatos(int iduser){
 
-            List<Models.TbContato> res = ctx.TbContatos.ToList();
+            List<Models.TbContato> res = ctx.TbContatos.Where(x => x.IdUsuario == iduser).ToList();
             return res;
         }
 
-        public Models.TbContato inserircontato(Models.Request.ContatoRequest req){
+        public Models.TbContato inserircontato(Models.Request.ContatoRequest req, int id){
 
-            Models.TbContato mod = conversor.converterRequest(req);
+            Models.TbContato mod = conversor.converterRequest(req, id);
 
             ctx.TbContatos.Add(mod);
             ctx.SaveChanges();

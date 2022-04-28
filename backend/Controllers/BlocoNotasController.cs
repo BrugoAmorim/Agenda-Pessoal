@@ -12,12 +12,12 @@ namespace backend.Controllers
     {
         Utils.BlocoNotasUtils conversor = new Utils.BlocoNotasUtils();
 
-        [HttpGet("buscar")]
-        public ActionResult<List<Models.Response.NotasResponse>> listartextos(){
+        [HttpGet("buscar/{idusuario}")]
+        public ActionResult<List<Models.Response.NotasResponse>> listartextos(int idusuario){
 
             try{
                 Business.LerBlocoNotasBusiness regras = new Business.LerBlocoNotasBusiness();
-                List<Models.TbBlocoNotas> lst = regras.validarconsulta();
+                List<Models.TbBlocoNotas> lst = regras.validarconsulta(idusuario);
 
                 List<Models.Response.NotasResponse> res = conversor.converterlistaTb(lst);
                 return res;
@@ -30,13 +30,13 @@ namespace backend.Controllers
             }
         }
 
-        [HttpPost("adicionar-bloco")]
-        public ActionResult<Models.Response.NotasResponse> salvarbloco(Models.Request.BlocodeNotasRequest req){
+        [HttpPost("adicionar-bloco/{idusuario}")]
+        public ActionResult<Models.Response.NotasResponse> salvarbloco(Models.Request.BlocodeNotasRequest req, int idusuario){
 
             try{
                 Business.SalvarBlocoNotasBusiness validar = new Business.SalvarBlocoNotasBusiness();
 
-                Models.TbBlocoNotas tb = validar.validarinsert(req);
+                Models.TbBlocoNotas tb = validar.validarinsert(req, idusuario);
                 Models.Response.NotasResponse res = conversor.converterTB(tb);
 
                 return res;

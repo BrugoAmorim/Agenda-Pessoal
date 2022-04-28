@@ -11,12 +11,12 @@ namespace backend.Business
     {
         Database.ContatosDatabase salvar = new Database.ContatosDatabase();
 
-        public Models.TbContato nvcontato(Models.Request.ContatoRequest req){
+        public Models.TbContato nvcontato(Models.Request.ContatoRequest req, int id){
 
             if(string.IsNullOrEmpty(req.nome))
                 throw new ArgumentException("É necessário preencher o nome do contato");
 
-            Models.TbContato obj = salvar.inserircontato(req);   
+            Models.TbContato obj = salvar.inserircontato(req, id);   
             return obj;
         }
     }

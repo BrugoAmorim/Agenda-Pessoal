@@ -24,7 +24,6 @@ namespace backend.Utils
             caixa.iduser = tb.IdUsuario;
             caixa.email = tb.DsEmail;
             caixa.usuario = tb.NmUsuario;
-            caixa.senha = tb.DsSenha;
             caixa.criado = tb.DtCriacao;
 
             return caixa;

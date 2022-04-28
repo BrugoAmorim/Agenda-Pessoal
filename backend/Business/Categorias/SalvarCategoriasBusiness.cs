@@ -7,10 +7,11 @@ namespace backend.Business
 {
     public class SalvarCategorias
     {
+        Database.UsuariosDatabase bancoUsuario = new Database.UsuariosDatabase();
         Database.CategoriasDatabase banco = new Database.CategoriasDatabase();
-        public Models.TbCategoria conferircategoria(Models.Request.CategoriaRequest req){
+        public Models.TbCategoria conferircategoria(Models.Request.CategoriaRequest req, int id){
 
-            List<Models.TbCategoria> caixote = banco.listarcategorias();
+            List<Models.TbCategoria> caixote = banco.listarcategorias(id);
 
             if(string.IsNullOrEmpty(req.categoria))
                 throw new ArgumentException("É necessário inserir um nome para a categoria");
@@ -21,7 +22,7 @@ namespace backend.Business
             if(caixote.Any(x => x.NmCategoria == req.categoria) == true)
                 throw new ArgumentException("Não é permitido criar categorias com o mesmo nome");
 
-            Models.TbCategoria obj = banco.salvarCategoria(req);
+            Models.TbCategoria obj = banco.salvarCategoria(req, id);
             return obj;
         }   
     }

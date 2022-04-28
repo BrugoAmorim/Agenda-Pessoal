@@ -9,15 +9,15 @@ namespace backend.Business
     {
         Database.CategoriasDatabase banco = new Database.CategoriasDatabase();
 
-        public Models.TbCategoria confirmaredicoes(Models.Request.CategoriaRequest req, int id){
+        public Models.TbCategoria confirmaredicoes(Models.Request.CategoriaRequest req, int idCat, int idUser){
 
-            List<Models.TbCategoria> caixote = banco.listarcategorias();
-            Models.TbCategoria modelo = banco.buscarobjid(id);
+            List<Models.TbCategoria> caixote = banco.listarcategorias(idUser);
+            Models.TbCategoria modelo = banco.buscarobjid(idCat);
 
             if(modelo == null)
                 throw new ArgumentException("Não encontramos esta categoria");
 
-            if(caixote.Any(x => x.NmCategoria == req.categoria && x.IdCategoria != id) == true)
+            if(caixote.Any(x => x.NmCategoria == req.categoria && x.IdCategoria != idCat) == true)
                 throw new ArgumentException("Não é permitido criar categorias com o mesmo nome");
 
             if(string.IsNullOrEmpty(req.categoria))
@@ -26,7 +26,7 @@ namespace backend.Business
             if(string.IsNullOrEmpty(req.descricao))
                 throw new ArgumentException("Você precisa adicionar uma descrição");
 
-            Models.TbCategoria obj = banco.salvarupdate(req, id);
+            Models.TbCategoria obj = banco.salvarupdate(req, idCat);
             return obj;
         }
     }

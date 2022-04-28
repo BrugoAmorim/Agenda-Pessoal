@@ -10,7 +10,6 @@ namespace backend.Models.Response
         public int iduser {get;set;}
         public string usuario {get;set;}
         public string email {get;set;}
-        public string senha {get;set;}
         public DateTime criado {get;set;}
     }
 }

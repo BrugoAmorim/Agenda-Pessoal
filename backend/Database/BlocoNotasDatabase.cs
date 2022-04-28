@@ -9,9 +9,9 @@ namespace backend.Database
     {
         Models.agendaContext ctx = new Models.agendaContext();
 
-        public List<Models.TbBlocoNotas> buscaranotacoes(){
+        public List<Models.TbBlocoNotas> buscaranotacoes(int idusuario){
 
-            List<Models.TbBlocoNotas> caixote = ctx.TbBlocoNota.ToList();
+            List<Models.TbBlocoNotas> caixote = ctx.TbBlocoNota.Where(x => x.IdUsuario == idusuario).ToList();
             return caixote;
         }
 

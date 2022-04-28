@@ -12,13 +12,13 @@ namespace backend.Controllers
     {
         Utils.CategoriasUtils conversor = new Utils.CategoriasUtils();
 
-        [HttpGet]
-        public ActionResult<List<Models.Response.CategoriasResponse>> listarcategorias(){
+        [HttpGet("buscar/{idusuario}")]
+        public ActionResult<List<Models.Response.CategoriasResponse>> listarcategorias(int idusuario){
 
             try{
                 Business.BuscarCategorias validar = new Business.BuscarCategorias();
 
-                List<Models.TbCategoria> caixote = validar.validarbusca();
+                List<Models.TbCategoria> caixote = validar.validarbusca(idusuario);
                 List<Models.Response.CategoriasResponse> res = conversor.converterLista(caixote);
 
                 return res;
@@ -31,12 +31,12 @@ namespace backend.Controllers
             }
         }
 
-        [HttpPost("criar-categoria")]
-        public ActionResult<Models.Response.CategoriasResponse> novaCategoria(Models.Request.CategoriaRequest req){
+        [HttpPost("criar-categoria/{idusuario}")]
+        public ActionResult<Models.Response.CategoriasResponse> novaCategoria(Models.Request.CategoriaRequest req, int idusuario){
             
             try{
                 Business.SalvarCategorias validar = new Business.SalvarCategorias();
-                Models.TbCategoria caixote = validar.conferircategoria(req);
+                Models.TbCategoria caixote = validar.conferircategoria(req, idusuario);
 
                 Models.Response.CategoriasResponse res = conversor.converterTb(caixote);
                 return res;
@@ -49,12 +49,12 @@ namespace backend.Controllers
             }
         }
 
-        [HttpPut("editar-categoria/{idcategoria}")]
-        public ActionResult<Models.Response.CategoriasResponse> modificar(Models.Request.CategoriaRequest req, int idcategoria){
+        [HttpPut("editar-categoria/{idusuario}/{idcategoria}")]
+        public ActionResult<Models.Response.CategoriasResponse> modificar(Models.Request.CategoriaRequest req, int idcategoria, int idusuario){
 
             try{
                 Business.EditarCategoriaBusiness validar = new Business.EditarCategoriaBusiness();
-                Models.TbCategoria obj = validar.confirmaredicoes(req, idcategoria);
+                Models.TbCategoria obj = validar.confirmaredicoes(req, idcategoria, idusuario);
 
                 Models.Response.CategoriasResponse res = conversor.converterTb(obj);
                 return res;

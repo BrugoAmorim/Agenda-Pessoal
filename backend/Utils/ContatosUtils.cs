@@ -35,7 +35,7 @@ namespace backend.Utils
             return lst;
         }
 
-        public Models.TbContato converterRequest(Models.Request.ContatoRequest req){
+        public Models.TbContato converterRequest(Models.Request.ContatoRequest req, int iduser){
 
             Models.TbContato tb = new Models.TbContato();
 
@@ -46,6 +46,7 @@ namespace backend.Utils
             tb.DsEstado = req.estado;
             tb.DsCidade = req.cidade;
             tb.DsNotas = req.anotacoes;
+            tb.IdUsuario = iduser;
 
             return tb;
         }

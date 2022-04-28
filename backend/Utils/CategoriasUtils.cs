@@ -13,6 +13,7 @@ namespace backend.Utils
             res.idcategoria = req.IdCategoria;
             res.categoria = req.NmCategoria;
             res.descricao = req.DsCategoria;
+            
 
             return res;
         }
@@ -30,11 +31,12 @@ namespace backend.Utils
             return caixote;
         }
 
-        public Models.TbCategoria converterReq(Models.Request.CategoriaRequest req){
+        public Models.TbCategoria converterReq(Models.Request.CategoriaRequest req, int id){
 
             Models.TbCategoria tb = new Models.TbCategoria();
             tb.NmCategoria = req.categoria;
             tb.DsCategoria = req.descricao;
+            tb.IdUsuario = id;
 
             return tb;
         }

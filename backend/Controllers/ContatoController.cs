@@ -12,13 +12,13 @@ namespace backend.Controllers
     {
         Utils.ContatosUtils conversores = new Utils.ContatosUtils();
 
-        [HttpGet("buscar-ctt")]
-        public ActionResult<List<Models.Response.ContatosResponse>> ctts(){
+        [HttpGet("buscar-ctt/{idusuario}")]
+        public ActionResult<List<Models.Response.ContatosResponse>> ctts(int idusuario){
 
             try{
                 Business.BuscarContatosBusiness validar = new Business.BuscarContatosBusiness();
 
-                List<Models.TbContato> lst = validar.seuscontatos();
+                List<Models.TbContato> lst = validar.seuscontatos(idusuario);
                 List<Models.Response.ContatosResponse> res = conversores.converterListaTB(lst);
 
                 return res;
@@ -31,13 +31,13 @@ namespace backend.Controllers
             }
         }
 
-        [HttpPost("novo-ctt")]
-        public ActionResult<Models.Response.ContatosResponse> inserircontato(Models.Request.ContatoRequest req){
+        [HttpPost("novo-ctt/{idusuario}")]
+        public ActionResult<Models.Response.ContatosResponse> inserircontato(Models.Request.ContatoRequest req, int idusuario){
 
             try{
                 Business.NovoContatoBusiness validar = new Business.NovoContatoBusiness();
 
-                Models.TbContato mod = validar.nvcontato(req);
+                Models.TbContato mod = validar.nvcontato(req, idusuario);
                 Models.Response.ContatosResponse res = conversores.conversorTB(mod);
 
                 return res;

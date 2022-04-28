@@ -32,7 +32,7 @@ namespace backend.Utils
             return caixote;
         } 
 
-        public Models.TbBlocoNotas converterReq(Models.Request.BlocodeNotasRequest req){
+        public Models.TbBlocoNotas converterReq(Models.Request.BlocodeNotasRequest req, int iduser){
 
             Models.TbBlocoNotas tb = new Models.TbBlocoNotas();
 
@@ -40,6 +40,7 @@ namespace backend.Utils
             tb.NmBloco = req.nome;
             tb.DtCriacao = DateTime.Now;
             tb.DtAtualizado = DateTime.Now;
+            tb.IdUsuario = iduser;
 
             return tb;
         }
