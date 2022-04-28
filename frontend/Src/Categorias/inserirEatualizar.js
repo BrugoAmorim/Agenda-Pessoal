@@ -1,3 +1,5 @@
+import {lerInfoUsuario} from '../Users/session.js';
+let infoUser = lerInfoUsuario();
 
 // metodo para salvar uma nova categoria
 export async function salvarCategoria(nomeCategoria, desc){
@@ -7,7 +9,7 @@ export async function salvarCategoria(nomeCategoria, desc){
         descricao: desc
     };
 
-    let url = "http://localhost:5000/Categorias/criar-categoria";
+    let url = "http://localhost:5000/Categorias/criar-categoria/" + infoUser.id;
 
     const api = await fetch(url, {
         mode:'cors',
@@ -30,7 +32,7 @@ export async function atualizarCategoria(idCategoria, nomeCategoria, desc){
         descricao: desc
     };
 
-    let url = "http://localhost:5000/Categorias/editar-categoria/" + idCategoria;
+    let url = "http://localhost:5000/Categorias/editar-categoria/" + infoUser.id + "/" + idCategoria;
 
     const chamapi = await fetch(url, {
         mode:'cors',

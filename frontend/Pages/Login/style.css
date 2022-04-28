@@ -1,15 +1,17 @@
 body{
     height: 100vh;
+}
 
-    flex-direction: row;
+.containerMaster{
+    height: 100%;
+
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: row;
 
-    background-image: url(https://img.freepik.com/fotos-gratis/fundo-azul-do-gradiente-de-luxo-abstrato-liso-azul-escuro-com-vinheta-preta-studio-banner_1258-71897.jpg?w=2000);
-    
+    background-image: url("../../Images/img-fundo-login.webp");
     background-repeat: no-repeat;
-    background-size: 100%;
 }
 
 .descSite{
@@ -22,7 +24,7 @@ body{
 }
 
 .Informacoes{
-    height: 75%;
+    height: 70%;
     width: 95%;
 
     display: flex;
@@ -42,17 +44,6 @@ body{
 
     text-align: center;
     flex-direction: column;
-}
-
-.Autor{
-    height: 10%;
-    width: 100%;
-    margin: 1%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
 }
 
 .Login{

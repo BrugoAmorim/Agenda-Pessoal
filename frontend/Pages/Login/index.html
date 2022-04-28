@@ -11,41 +11,39 @@
     <link rel="shortcut icon" href="../../Images/logo-pag.ico" type="image/x-icon">
 </head>
 <body>
-    <div class="descSite">
-        <div class="Informacoes border border-3">
-            <div class="blocodescricao">
-                <h1 style="margin: 1%;">Agenda Pessoal</h1>
-                <p class="lead" style="margin: 1%;">
-                    Organize por aqui as suas rotinas. Interface agradável com uma interatividade que não o deixa perdido, aqui você pode guardar as informações essenciais do seu trabalho, estudos e muito mais. Cansado de ter que lembrar aonde você guardou aquele número de telefone? aqui você não terá esse problema! Já que contamos com uma parte apenas para gerenciar os contatos de nossos clientes. Além de que o sistema conta com outras funcionalidades que o ajudam a não se perder na correria do dia a dia.
-                </p>
+    <div class="containerMaster">
+        <div class="descSite">
+            <div class="Informacoes border border-3">
+                <div class="blocodescricao">
+                    <h1 style="margin: 1%;">Agenda Pessoal</h1>
+                    <p class="lead" style="margin: 1%;">
+                        Organize por aqui as suas rotinas. Interface agradável com uma interatividade que não o deixa perdido, aqui você pode guardar as informações essenciais do seu trabalho, estudos e muito mais. Cansado de ter que lembrar aonde você guardou aquele número de telefone? aqui você não terá esse problema! Já que contamos com uma parte apenas para gerenciar os contatos de nossos clientes. Além de que o sistema conta com outras funcionalidades que o ajudam a não se perder na correria do dia a dia.
+                    </p>
+                </div>
             </div>
-            <div class="Autor">
-                <p class="lead">
-                    <strong>Feito por</strong>
-                    <a href="#">@BrugoAmorim</a>
-                </p>
+        </div>
+        <div class="Login">
+            <div class="logarSistema border border-3">
+                <div class="infoUser">
+                    <div class="Usuario">
+                        <label for="UserOrMail" class="lead">Nome de usuário ou email:</label>
+                        <input type="text" id="User" name="UserOrMail" class="form-control">
+                    </div>
+                    <div class="Senha">
+                        <label for="Password" class="lead">Senha de acesso:</label>
+                        <input type="password" id="Senha" name="Password" class="form-control">
+                    </div>
+                </div>
+                <div class="Eventos">
+                    <button id="Entrar" class="btn btn-primary" style="width: 30%;">Entrar</button>
+                    <p class="lead">É novo por aqui?
+                        <a href="#">Registre-se.</a>
+                    </p>
+                </div>
             </div>
         </div>
     </div>
-    <div class="Login">
-        <div class="logarSistema border border-3">
-            <div class="infoUser">
-                <div class="Usuario">
-                    <label for="UserOrMail" class="lead">Nome de usuário ou email:</label>
-                    <input type="text" name="UserOrMail" class="form-control">
-                </div>
-                <div class="Senha">
-                    <label for="Password" class="lead">Senha de acesso:</label>
-                    <input type="password" name="Password" class="form-control">
-                </div>
-            </div>
-            <div class="Eventos">
-                <button class="btn btn-primary" style="width: 30%;">Entrar</button>
-                <p class="lead">É novo por aqui? 
-                    <a href="#">Registre-se.</a>
-                </p>
-            </div>
-        </div>
-    </div>
+    <script src="../../Src/Users/main.js" type="module"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 </html>

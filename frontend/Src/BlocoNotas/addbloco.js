@@ -1,4 +1,6 @@
 
+import { lerInfoUsuario } from '../Users/session.js';
+let infoUser = lerInfoUsuario();
 
 let texto = document.getElementById("inpConteudo");
 let titulo = document.getElementById("inpTitulo");
@@ -12,7 +14,7 @@ salvar.onclick = async () => {
         texto: texto.value
     };
 
-    let url = "http://localhost:5000/BlocoNotas/adicionar-bloco";
+    let url = "http://localhost:5000/BlocoNotas/adicionar-bloco/" + infoUser.id;
 
     const api = await fetch(url,{
 

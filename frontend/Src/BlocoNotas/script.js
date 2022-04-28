@@ -1,11 +1,13 @@
-
+import { lerInfoUsuario } from '../Users/session.js'
 import { CriarInfoTemporarias } from './exportar.js'
+
+let infoUser = lerInfoUsuario();
 
 let corpotable = document.getElementById("informacoes");
 
 window.onload = async function(){
 
-    let url = "http://localhost:5000/BlocoNotas/buscar";
+    let url = "http://localhost:5000/BlocoNotas/buscar/" + infoUser.id;
 
     const consumirapi = await fetch(url, {
 

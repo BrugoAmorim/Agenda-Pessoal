@@ -1,12 +1,15 @@
 
 import { salvarinfotemporarias, criarinfotemporarias } from './session.js'
+import { lerInfoUsuario } from '../Users/session.js'
+
+let infoUser = lerInfoUsuario();
 
 let corpo = document.getElementById("conteudo");
 
 // quando a pagina carregar, os contatos do usuario serao mostrados
 window.onload = async () => {
 
-    let url = "http://localhost:5000/Contato/buscar-ctt";
+    let url = "http://localhost:5000/Contato/buscar-ctt/" + infoUser.id;
 
     const api = await fetch(url,{
 
@@ -87,7 +90,7 @@ add.onclick = async () => {
         anotacoes: ant.value
     };
 
-    let url = "http://localhost:5000/Contato/novo-ctt";
+    let url = "http://localhost:5000/Contato/novo-ctt/" + infoUser.id;
 
     const chamaapi = await fetch(url, {
         
@@ -128,7 +131,7 @@ recarregar.onclick = async () =>{
     while(corpo.firstChild)
         corpo.removeChild(corpo.firstChild);
 
-    let url = "http://localhost:5000/Contato/buscar-ctt";
+    let url = "http://localhost:5000/Contato/buscar-ctt/" + infoUser.id;
 
     const api = await fetch(url,{
 

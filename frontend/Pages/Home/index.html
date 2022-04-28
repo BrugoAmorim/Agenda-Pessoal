@@ -17,9 +17,9 @@
         </div>
         <div class="Usuario">
             <div class="Informacoes">
-                <span class="lead" style="color: white;">@Nome_Usuario</span>
+                <span id="nmUser" class="lead" style="color: white;">@</span>
                 <a href="#" class="lead">Minha conta</a>
-                <a href="#" class="lead">Sair</a>
+                <a href="../Login/index.html" class="lead" id="btnSair">Sair</a>
             </div>
         </div>
     </header>
@@ -31,14 +31,14 @@
             <div class="Descricao">
                 <h2>Meus Contatos</h2>
                 <p class="lead">Com esta aplicação você nunca mais perderá seus contatos. Aqui você pode gerenciar os números de telefones e emails de seus familiares, colegas e afins. Fácil, rápido e intuitivo.</p>
-                <button class="btn btn-primary" style="width: 20%;">Entrar</button>
+                <a href="../Contatos/index.html" class="btn btn-dark" style="width: 20%;">Entrar</a>
             </div>
         </div>
         <div class="BlocodeNotas">
             <div class="Descricao">
                 <h2>Minhas Anotações</h2>
                 <p class="lead">Nesta aplicação voce pode escrever seus blocos de texto, faça anotações, monte listas, escreva histórias e muito mais. Aqui você pode gerenciar todos os textos que escreve de maneira rápida e organizada.</p>
-                <button class="btn btn-primary" style="width: 20%;">Entrar</button>
+                <a href="../BlocodeNotas/index.html" class="btn btn-dark" style="width: 20%;">Entrar</a>
             </div>
             <div class="imgNotas">
                 <img src="../../Images/img-anotacoes.png" alt="logo bloco de notas" height="250em" width="250em">
@@ -51,7 +51,7 @@
             <div class="Descricao">
                 <h2>Minhas Tarefas</h2>
                 <p class="lead">Está funcionalidade permite que você crie suas metas, cansado de misturar as tarefas do trabalho com as de casa? este problema acabou, pois aqui separamos as tarefas por categorias, para lhe ajudar a não ficar perdido nas atividades do dia a dia.</p>
-                <button class="btn btn-primary" style="width: 20%;">Entrar</button>
+                <a href="../Categorias/index.html" class="btn btn-dark" style="width: 20%;">Entrar</a>
             </div>
         </div>
     </article>
@@ -61,5 +61,7 @@
             <a href="#" class="lead">@BrunoGomes</a>
         </div>
     </footer>
+    <script src="../../Src/Users/home.js" type="module"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 </html>

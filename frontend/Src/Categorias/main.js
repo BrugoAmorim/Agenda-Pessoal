@@ -1,12 +1,14 @@
 import { confirmarExclusao } from './apagarCategoria.js';
 import { atualizarCategoria } from './inserirEatualizar.js'
 import { IncrementarObjeto } from './session.js'
+import { lerInfoUsuario } from '../Users/session.js'
 
+let infoUser = lerInfoUsuario();
 let conjunto = document.getElementById("Conjunto");
 
 export async function carregarListas(){
 
-    let url = "http://localhost:5000/Categorias";
+    let url = "http://localhost:5000/Categorias/buscar/" + infoUser.id;
 
     const api = await fetch(url,{
         method: 'GET',
