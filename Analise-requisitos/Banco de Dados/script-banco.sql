@@ -63,10 +63,10 @@ select * from tb_contato;
 
 /* inserções na tabela usuarios */
 insert into tb_usuarios(nm_usuario, ds_email, ds_senha, dt_criacao)
-value ('Bruno Gomes', 'teste@teste.com', '12345678', '2022-04-12');
+value ('@Bruno_Gomes', 'teste@teste.com', '12345678', '2022-04-12');
 
 insert into tb_usuarios(nm_usuario, ds_email, ds_senha, dt_criacao)
-value ('Filipe', 'developer@teste.com', '987654321', '2022-03-02');
+value ('@Filipe', 'developer@teste.com', '987654321', '2022-03-02');
 
 
 /* inserções na tabela categoria */
