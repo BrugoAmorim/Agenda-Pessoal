@@ -15,23 +15,25 @@
         <div class="Formulario">
             <div class="UsuarioeEmail">
                 <label for="Meunome" class="lead">Nome de Usuário</label>
-                    <input class="form-control" name="Meunome" type="text" required>
+                    <input id="inpNome" class="form-control" name="Meunome" type="text" required>
                 <label for="Meuemail" class="lead">Email</label>
-                    <input class="form-control" name="Meuemail" type="text" required>
+                    <input id="inpEmail" class="form-control" name="Meuemail" type="text" required>
             </div>
             <div class="Senha">
                 <label for="Minhasenha" class="lead">Senha</label>
-                    <input class="form-control" name="Minhasenha" type="password" required>
+                    <input id="inpSenha" class="form-control" name="Minhasenha" type="password" required>
                 <label for="confirmar" class="lead">Confirmar Senha</label>
-                    <input class="form-control" name="confirmar" type="password" required>
+                    <input id="inpConfirmarSenha" class="form-control" name="confirmar" type="password" required>
             </div>
             <div class="Eventos">
                 <div class="eventosPag">
                     <a href="../Login/index.html" class="btn btn-dark">Voltar</a>
-                    <button class="btn btn-primary">Criar Conta</button>
+                    <button class="btn btn-primary" id="btnCriar">Criar Conta</button>
                 </div>
             </div>
         </div>
     </div>
+    <script src="../../Src/Users/criarconta.js" type="module"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 </html>

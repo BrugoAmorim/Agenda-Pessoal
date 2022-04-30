@@ -6,7 +6,6 @@ window.onload = () => {
 
     let infoUser = lerInfoUsuario();
     nomeUser.appendChild(document.createTextNode(infoUser.usuario));
-    console.log(infoUser);
 }
 
 let btnSair = document.getElementById("btnSair");
