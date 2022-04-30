@@ -3,7 +3,7 @@ body{
     margin: 0px;
     padding: 0px;
 
-    background-image: linear-gradient(#6495ED,#A020F0);
+    background-image: linear-gradient(#6495ED, #6495ED);
 }
 
 .container{
@@ -18,29 +18,31 @@ body{
 .addcontato{
     height: 70%;
     width: 40%;
-    border: 1px solid black;
+    margin: 1%;
+    
     align-items: center;
     justify-content: center;
     display: flex;
-    margin: 1%;
     background-color: white;
+    border-radius: 8px;
 }
 
 .lstcontatos{
     height: 70%;
     width: 45%;
-    border: 1px solid black;
+    margin: 1%;
+
     flex-direction: column;
     display: flex;
 
     justify-content: space-around;
     align-items: center;
     background-color: white;
-    margin: 1%;
+    border-radius: 8px;    
 }
 
 .subtitulo{
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid silver;
     width: 95%;
     height: 15%;
     justify-content: space-between;

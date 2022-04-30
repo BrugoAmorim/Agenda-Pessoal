@@ -4,7 +4,7 @@ body{
     padding: 0px;
     margin: 0px;
 
-    background-image: linear-gradient(#6495ED,#A020F0);
+    background-image: linear-gradient(#6495ED,#6495ED);
 }
 
 .container{
@@ -26,7 +26,6 @@ body{
 .bloco{
     width: 60%;
     height: 85%;
-    border: 1px solid black;
 
     justify-content: space-around;
     align-items: center;
@@ -34,6 +33,7 @@ body{
     flex-direction: column;
 
     background-color: white;
+    border-radius: 8px;
 }
 
 .texto{
@@ -52,7 +52,7 @@ body{
     display: flex;
     align-items: center;
 
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid silver;
 }
 
 .eventos{
