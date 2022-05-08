@@ -50,6 +50,42 @@ namespace backend.Controllers
             }
         }
 
+        [HttpDelete("apagar-conta/{idconta}")]
+        public ActionResult<Models.Response.SuccessResponse> deletarconta(int idconta){
+
+            try{
+
+                Business.ExcluirContaBusiness validar = new Business.ExcluirContaBusiness();
+                validar.validarconta(idconta);
+            
+                return new Models.Response.SuccessResponse("Deletado com sucesso", 200);
+            }
+            catch(System.Exception msg){
+
+                return new BadRequestObjectResult(
+                    new Models.ErrorResponse(msg.Message, 400)
+                );
+            }
+        }
+
+        [HttpPut("editar-conta/{idconta}")]
+        public ActionResult<Models.Response.ContaResponse> atualizarInfo(int idconta, string email, string senha){
+
+            try{
+                Business.AtualizarContaBusiness validarUpt = new Business.AtualizarContaBusiness();
+                Models.TbUsuario conta = validarUpt.validarupdate(idconta, email, senha);
+
+                Models.Response.ContaResponse caixote = conversor.converterTb(conta);
+                return caixote;
+            }
+            catch(System.Exception msg){
+
+                return new BadRequestObjectResult(
+                    new Models.ErrorResponse(msg.Message, 400)
+                );
+            }
+        }
+
         // funcionalidade apenas para buscas, nao tera no sistema
         [HttpGet]
         public List<Models.TbUsuario> listar(){

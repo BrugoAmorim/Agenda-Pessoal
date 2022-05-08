@@ -36,5 +36,22 @@ namespace backend.Database
             Models.TbUsuario info = bd.TbUsuarios.FirstOrDefault(x => x.IdUsuario == iduser);
             return info;
         }
+
+        public void excluirconta(int id){
+
+            Models.TbUsuario informacoes = bd.TbUsuarios.First(x => x.IdUsuario == id);
+            bd.TbUsuarios.Remove(informacoes);
+            bd.SaveChanges();
+        }
+
+        public Models.TbUsuario updateConta(int id, string email, string senha){
+
+            Models.TbUsuario user = bd.TbUsuarios.First(x => x.IdUsuario == id);
+            user.DsEmail = email;
+            user.DsSenha = senha;
+
+            bd.SaveChanges();
+            return user;            
+        }
     }
 }
