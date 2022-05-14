@@ -28,3 +28,23 @@ export function apagarInfoUsuario(){
     localStorage.removeItem('email');
     localStorage.removeItem('dtcriado');
 }
+
+export async function validarIdentidade(idconta, senha){
+
+    let url = "http://localhost:5000/Usuarios/validar-usuario/" + idconta + "?senha=" + senha;
+
+    const api = await fetch(url, {
+
+        method: 'GET',
+        mode: 'cors'
+    });
+
+    let res = api.json();
+    res.then((data) => {
+
+        if(data.codigo == 400)
+            swal(data.mensagem, "", 'error')
+        else
+            window.location.href = "../MinhasInformacoes/info.html";
+    })
+}
