@@ -9,7 +9,7 @@ body{
     align-items: center;   
     justify-content: center;
 
-    background-image: url("../../Images/img-fundo-login.webp");
+    background-image: url("../../../Images/img-fundo-login.webp");
     background-repeat: no-repeat;
 }
 

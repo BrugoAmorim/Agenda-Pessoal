@@ -60,7 +60,7 @@ export function IncrementarObjeto(param){
     let imgSalvar = document.createElement('img');
     
     // imagem de salvar, com tamanho de 35em
-    imgSalvar.src = "../../Images/icone-salvar.png";
+    imgSalvar.src = "../../../Images/icone-salvar.png";
     imgSalvar.alt = "imagem de um disquete";
     imgSalvar.height = '35';
     // o botao salvar inseri esta imagem dentro de seu escopo
@@ -106,7 +106,7 @@ export function IncrementarObjeto(param){
         let imgVer = document.createElement('img');
         
         // icone ver, com o tamaho de 35em
-        imgVer.src = "../../Images/icone-ver.png";
+        imgVer.src = "../../../Images/icone-ver.png";
         imgVer.alt = "possivelmente uma imagem de um olho";
         imgVer.height = '35';
         // o botao ver, inseri dentro de seu escopo o icone ver
@@ -120,7 +120,7 @@ export function IncrementarObjeto(param){
         let imgApagar = document.createElement('img');
 
         // imagem da lixeira, com tamanho de 35em
-        imgApagar.src = "../../Images/icone-apagar.png";
+        imgApagar.src = "../../../Images/icone-apagar.png";
         imgApagar.alt = "possivel imagem de uma lixeira";
         imgApagar.height = '35';
         // o botao apagar inseri a img lixeira dentro de seu escopo

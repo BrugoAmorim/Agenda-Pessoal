@@ -37,7 +37,7 @@ window.onload = async () => {
             
             nome.appendChild(linknome);
             
-            imglixeira.src = "../../images/trash.png";
+            imglixeira.src = "../../../Images/trash.png";
             imglixeira.height = 20;
             imglixeira.width = 20;
 
@@ -159,7 +159,7 @@ recarregar.onclick = async () =>{
             
             nome.appendChild(linknome);
 
-            imglixeira.src = "../../images/trash.png";
+            imglixeira.src = "../../../images/trash.png";
             imglixeira.height = 20;
             imglixeira.width = 20;
 

@@ -42,7 +42,7 @@ export let criarObjeto = (param) => {
     btnSalvar.classList.add("btn-salvar");
 
     let imgDisquete = document.createElement('img');
-    imgDisquete.src = "../../Images/icone-salvar.png";
+    imgDisquete.src = "../../../Images/icone-salvar.png";
     imgDisquete.alt = "imagem de disquete";
     imgDisquete.height = "45";
 
@@ -111,7 +111,7 @@ export let criarObjeto = (param) => {
         btnExcluir.classList.add("btn-excluir");
 
         let imgExcluir = document.createElement('img');
-        imgExcluir.src = "../../Images/icone-apagar.png";
+        imgExcluir.src = "../../../Images/icone-apagar.png";
         imgExcluir.alt = "icone de lixeira";
         imgExcluir.height = "35";
 

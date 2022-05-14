@@ -6,7 +6,7 @@ export function infoUsuario(obj){
     localStorage.setItem('email', obj.email);
     localStorage.setItem('dtcriado', obj.criado);
 
-    window.location.href = "../../Pages/Home/index.html";
+    window.location.href = "../../Public/Pages/Menu/index.html";
 }
 
 export function lerInfoUsuario(){
