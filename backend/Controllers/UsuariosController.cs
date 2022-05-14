@@ -87,11 +87,22 @@ namespace backend.Controllers
         }
 
         // funcionalidade apenas para buscas, nao tera no sistema
-        [HttpGet]
-        public List<Models.TbUsuario> listar(){
+        [HttpGet("validar-usuario/{idconta}")]
+        public ActionResult<Models.Response.ContaResponse> buscarUser(int idconta, string senha){
 
-            Models.agendaContext db = new Models.agendaContext();
-            return db.TbUsuarios.ToList();
+            try{
+                Business.ConfirmarIdentidadeBussines validar = new Business.ConfirmarIdentidadeBussines();
+                Models.TbUsuario conta = validar.validarIdentidade(idconta, senha);
+
+                Models.Response.ContaResponse res = conversor.converterTb(conta);
+                return res;
+            }
+            catch(System.Exception msg){
+
+                return new BadRequestObjectResult(
+                    new Models.ErrorResponse(msg.Message, 400)
+                );
+            }
         }
     }
 }
