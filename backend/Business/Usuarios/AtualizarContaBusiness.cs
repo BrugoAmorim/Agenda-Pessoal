@@ -15,6 +15,12 @@ namespace backend.Business
             Models.TbUsuario info = banco.buscarUserId(idconta);
             Models.TbUsuario user = banco.infoUser(email);
 
+            if(string.IsNullOrEmpty(email))
+                throw new ArgumentException("Insira um email válido");
+
+            if(string.IsNullOrEmpty(senha))
+                throw new ArgumentException("Insira uma senha válida");
+
             if(info == null)
                 throw new ArgumentException("Usuario não encontrado");
 
