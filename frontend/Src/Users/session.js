@@ -44,7 +44,9 @@ export async function validarIdentidade(idconta, senha){
 
         if(data.codigo == 400)
             swal(data.mensagem, "", 'error')
-        else
+        else{
+            localStorage.setItem("myPass", senha);
             window.location.href = "../MinhasInformacoes/info.html";
+        }
     })
 }

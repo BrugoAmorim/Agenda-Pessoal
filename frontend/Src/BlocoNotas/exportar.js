@@ -82,11 +82,20 @@ export function ConversorMes(data){
     return caixote;
 }
 
-export function CriaModeloData(datetime){
+export function CriaModeloData(datetime, modelodata){
 
-    let modelo = ConversorMes(datetime);
+    if(modelodata == "dataincompleta"){
+        let modelo = ConversorMes(datetime);
 
-    let res = datetime.getHours() + ":" + datetime.getMinutes() + " - " + modelo.substring(0,modelo.lastIndexOf("/")); 
-    // ex: res -> '01:00 - 01/01'
-    return res;
+        let res = datetime.getHours() + ":" + datetime.getMinutes() + " - " + modelo.substring(0,modelo.lastIndexOf("/")); 
+        // ex: res -> '01:00 - 01/01'
+        return res;
+    }
+    else if(modelodata == "datacompleta"){
+        let modelo = ConversorMes(datetime);
+
+        let res = datetime.getHours() + ":" + datetime.getMinutes() + " - " + modelo;
+        // ex: res -> '01:00 - 01/01/0001'
+        return res;
+    }
 }

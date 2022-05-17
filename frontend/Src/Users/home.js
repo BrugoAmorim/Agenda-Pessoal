@@ -27,8 +27,6 @@ conta.onclick = () => {
             content: 'input'
         }
     ).then((value) => {
-
         validarIdentidade(infoUser.id, value);
     })
 }
-

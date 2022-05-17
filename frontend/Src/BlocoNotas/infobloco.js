@@ -22,9 +22,9 @@ window.onload = () =>{
     txtBloco.value = obj.texto;
 
     // metodo que exibe a data de criacao
-    criado.innerHTML = "Criado às " + CriaModeloData(registro);
+    criado.innerHTML = "Criado às " + CriaModeloData(registro, "dataincompleta");
     // metodo que exibe a data de atualizacao
-    atualizado.innerHTML = "Atualizado às " + CriaModeloData(ultimaalteracao);
+    atualizado.innerHTML = "Atualizado às " + CriaModeloData(ultimaalteracao, "dataincompleta");
 }
 
 let btnAtualizar = document.getElementById("Atualizar");

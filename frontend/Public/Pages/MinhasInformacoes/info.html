@@ -27,23 +27,25 @@
         </div>
         <div class="blocoDetalhes">
             <div class="Usuario">
-                <p class="lead">@Bruno_Gomes</p>
+                <p class="lead" id="nmUsuario"></p>
             </div>
             <div class="Email">
-                <label class="lead" for="inpMail">Meu Email</label>
-                <input id="inpMail" class="form-control" type="text">
+                <label class="lead" for="MeuEmail">Meu Email</label>
+                <input id="MeuEmail" class="form-control" type="text">
             </div>
             <div class="Minha-senha">
-                <label class="lead" for="inpPassword">Senha</label>
+                <label class="lead" for="MinhaSenha">Senha</label>
                 <div class="input-group">
-                    <input type="password" class="form-control">
-                    <button class="btn btn-secondary" type="button">Ver</button>
+                    <input id="MinhaSenha" type="password" class="form-control">
+                    <button id="btnVerSenha" class="btn btn-secondary" type="button">Ver</button>
                 </div>
             </div>
             <div class="Data-criacao">
                 <div class="dt-conta-criada">
                     <span class="lead">Conta criada:</span>
-                    <span class="lead">13:59 - 10/01/2022</span>
+                    <span class="lead" id="DataCriado">
+                        <!-- informacao sobre a data de criação -->
+                    </span>
                 </div>
             </div>
         </div>
@@ -51,5 +53,6 @@
     <footer>
         <h1>Agenda Pessoal &copy;2022</h1>
     </footer>
+    <script src="../../../Src/Users/atualizarconta.js" type="module"></script>
 </body>
 </html>
