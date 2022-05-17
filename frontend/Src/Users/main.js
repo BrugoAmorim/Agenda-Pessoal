@@ -7,7 +7,7 @@ let inpSenha = document.getElementById("Senha");
 
 btnEntrar.onclick = async function(){
 
-    let url = "http://localhost:5000/Usuarios/login?userOrmail=@" + inpUser.value + "&password=" + inpSenha.value;
+    let url = "http://localhost:5000/Usuarios/login?userOrmail=" + inpUser.value + "&password=" + inpSenha.value;
 
     const api = await fetch(url, {
         
@@ -16,7 +16,7 @@ btnEntrar.onclick = async function(){
     });
 
     let res = api.json();
-    res.then(res =>{
+    res.then(res =>{ 
 
         if(res.codigo == 400){
 
