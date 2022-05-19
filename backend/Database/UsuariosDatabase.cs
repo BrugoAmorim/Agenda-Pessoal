@@ -37,13 +37,6 @@ namespace backend.Database
             return info;
         }
 
-        public void excluirconta(int id){
-
-            Models.TbUsuario informacoes = bd.TbUsuarios.First(x => x.IdUsuario == id);
-            bd.TbUsuarios.Remove(informacoes);
-            bd.SaveChanges();
-        }
-
         public Models.TbUsuario updateConta(int id, string email, string senha){
 
             Models.TbUsuario user = bd.TbUsuarios.First(x => x.IdUsuario == id);
@@ -52,6 +45,43 @@ namespace backend.Database
 
             bd.SaveChanges();
             return user;            
+        }
+
+        public void excluirConta(int idconta){
+
+            Models.TbUsuario user = bd.TbUsuarios.First(x => x.IdUsuario == idconta);
+
+            List<Models.TbBlocoNotas> Notas = bd.TbBlocoNota.Where(x => x.IdUsuario == idconta).ToList();
+            List<Models.TbContato> Contatos = bd.TbContatos.Where(x => x.IdUsuario == idconta).ToList();
+            List<Models.TbCategoria> Categorias = bd.TbCategoria.Where(x => x.IdUsuario == idconta).ToList();
+
+            foreach(Models.TbBlocoNotas item in Notas){
+                bd.TbBlocoNota.Remove(item);
+                bd.SaveChanges();
+            }
+
+            foreach(Models.TbContato item in Contatos){
+                bd.TbContatos.Remove(item);
+                bd.SaveChanges();
+            }
+            
+            foreach(Models.TbCategoria item in Categorias){
+                
+                List<Models.TbTarefa> MinhasTarefas = bd.TbTarefas.Where(x => x.IdCategoria == item.IdCategoria)
+                                                                  .ToList();
+                foreach(Models.TbTarefa obj in MinhasTarefas){
+
+                    bd.TbTarefas.Remove(obj);
+                    bd.SaveChanges();
+                }
+
+                bd.TbCategoria.Remove(item);
+                bd.SaveChanges();
+            }
+
+            bd.TbUsuarios.Remove(user);
+            bd.SaveChanges();
+
         }
     }
 }

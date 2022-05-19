@@ -54,7 +54,6 @@ namespace backend.Controllers
         public ActionResult<Models.Response.SuccessResponse> deletarconta(int idconta){
 
             try{
-
                 Business.ExcluirContaBusiness validar = new Business.ExcluirContaBusiness();
                 validar.validarconta(idconta);
             

@@ -15,7 +15,7 @@ namespace backend.Business
             if(user == null)
                 throw new ArgumentException("Usuario não encontrado");
 
-            banco.excluirconta(idconta);
+            banco.excluirConta(idconta);
         }
     }
 }
