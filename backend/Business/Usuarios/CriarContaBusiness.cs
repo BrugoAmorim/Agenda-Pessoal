@@ -32,7 +32,7 @@ namespace backend.Business
             if(string.IsNullOrEmpty(req.usuario))
                 throw new ArgumentException("É necessario inserir um nome de usuario");
 
-            if(req.usuario.Length < 6 || req.usuario.Contains(" "))
+            if(req.usuario.Length < 6 || req.usuario.Contains(" ") || req.usuario.Contains("@"))
                 throw new ArgumentException("Este nome de usuario é inválido!");
 
             if(validarEmail.ValidarEmail(req.email) == false)

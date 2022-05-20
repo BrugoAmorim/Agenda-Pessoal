@@ -13,7 +13,18 @@ namespace backend.Business
         public Models.TbUsuario validarUsuario(string userOrmail, string password){
 
             List<Models.TbUsuario> usuarios = banco.buscarUsuarios();
-            Models.TbUsuario user = banco.infoUser(userOrmail);
+            Models.TbUsuario user = new Models.TbUsuario();
+            
+            switch(userOrmail.Contains('@') == true){
+
+                case true:
+                    user = banco.infoUser(userOrmail);
+                    break;
+
+                case false:
+                    user = banco.infoUser('@' + userOrmail);
+                    break;
+            }
 
             if(string.IsNullOrEmpty(userOrmail))
                 throw new ArgumentException("Voce não informou seu usuário");
@@ -24,11 +35,12 @@ namespace backend.Business
             if(password.Length < 8)
                 throw new ArgumentException("Senha inválida");
 
-            if(usuarios.Any(x => x.NmUsuario == userOrmail || x.DsEmail == userOrmail) == false)
+            if(usuarios.Any(x => x.NmUsuario == user.NmUsuario || x.DsEmail == user.NmUsuario) == false)
                 throw new ArgumentException("Este usuário nao foi encontrado");
 
             if(user.DsSenha != password)
                 throw new ArgumentException("Senha incorreta");
+
 
             return user;
         }
