@@ -50,3 +50,25 @@ export async function validarIdentidade(idconta, senha){
         }
     })
 }
+
+export async function deletarConta(idconta){
+    
+    let url = "http://localhost:5000/Usuarios/apagar-conta/" + idconta;
+
+    const api = await fetch(url, {
+
+        mode: 'cors',
+        method: 'DELETE'
+    });
+
+    let res = api.json();
+    res.then((data) => {
+
+        if(data.codigo == 400)
+            swal("Algo deu errado!", data.mensagem, 'error');
+        if(data.codigo == 200)
+            swal('Conta Excluida', '', 'success').then(() => { 
+                window.location.href = "../../Home/home.html"; 
+            });
+    })
+}

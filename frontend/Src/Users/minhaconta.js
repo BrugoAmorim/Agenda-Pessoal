@@ -1,5 +1,5 @@
 
-import { lerInfoUsuario } from "./session.js";
+import { lerInfoUsuario, deletarConta } from "./session.js";
 import { CriaModeloData } from '../BlocoNotas/exportar.js';
 
 let user = document.getElementById("nmUsuario");
@@ -7,6 +7,7 @@ let email = document.getElementById("MeuEmail");
 let senha = document.getElementById("MinhaSenha");
 let dtcriado = document.getElementById("DataCriado");
 
+// obj JSON com as informacoes do usuario
 let obj = lerInfoUsuario();
 
 let verSenha = document.getElementById("btnVerSenha");
@@ -44,6 +45,31 @@ btnAtualizar.onclick = async () => {
             swal("Informações atualizadas! 🤩", "", 'success');
         }
     })
+}
+
+let btnExcluir = document.getElementById("Excluirconta");
+btnExcluir.onclick = async () => {
+
+    swal("Excluir conta!", "Voce está prestes a excluir sua conta, todas as informações serão perdidas", 'warning', {
+        buttons: {
+            cancel: 'Voltar',
+
+            catch: {
+                text: 'Continuar',
+                value: 'apagar'
+            }
+        }
+    }).then((value) => {
+
+        switch(value){
+            case 'apagar':
+                deletarConta(obj.id);          
+                break;
+
+            default:
+                break;
+        }
+    })    
 }
 
 window.onload = () => {
