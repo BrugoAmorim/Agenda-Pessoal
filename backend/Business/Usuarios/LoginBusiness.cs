@@ -9,22 +9,12 @@ namespace backend.Business
     public class LoginBusiness
     {
         Database.UsuariosDatabase banco = new Database.UsuariosDatabase();
-
+        Business.ValidarEmailBusiness validarEmail = new Business.ValidarEmailBusiness();
+        
         public Models.TbUsuario validarUsuario(string userOrmail, string password){
 
             List<Models.TbUsuario> usuarios = banco.buscarUsuarios();
             Models.TbUsuario user = new Models.TbUsuario();
-            
-            switch(userOrmail.Contains('@') == true){
-
-                case true:
-                    user = banco.infoUser(userOrmail);
-                    break;
-
-                case false:
-                    user = banco.infoUser('@' + userOrmail);
-                    break;
-            }
 
             if(string.IsNullOrEmpty(userOrmail))
                 throw new ArgumentException("Voce não informou seu usuário");
@@ -35,12 +25,25 @@ namespace backend.Business
             if(password.Length < 8)
                 throw new ArgumentException("Senha inválida");
 
-            if(usuarios.Any(x => x.NmUsuario == user.NmUsuario || x.DsEmail == user.NmUsuario) == false)
-                throw new ArgumentException("Este usuário nao foi encontrado");
+            switch(userOrmail.Contains('@')){
+
+                case true:
+                    if(usuarios.Any(x => x.DsEmail == userOrmail) == false)
+                        throw new ArgumentException("Este usuário nao foi encontrado");
+                    else
+                        user = banco.infoUser(userOrmail);
+                    break;
+
+                case false:
+                    if(usuarios.Any(x => x.NmUsuario == "@" + userOrmail) == false)
+                        throw new ArgumentException("Este usuário nao foi encontrado");
+                    else    
+                        user = banco.infoUser('@' + userOrmail);
+                    break;
+            }
 
             if(user.DsSenha != password)
                 throw new ArgumentException("Senha incorreta");
-
 
             return user;
         }
