@@ -1,31 +1,39 @@
 # Agenda-Pessoal
 Agenda Pessoal, sistema feito para organizar a rotina de seus usuários
 
-Projeto feito para fixar conhecimentos já aprendidos. Neste sistema eu pretendo ir adicionando mais coisas a longo prazo, é pra realmente ser uma agenda pessoal,
-aonde o usuário poderá salvar contatos, escrever textos em blocos de notas e criar listas de tarefas. Cada usuário terá sua agenda própria necessitando logar no sistema, isso será adicionado futuramente, enquanto isso vou fazendo uma parte de cada vez.
+Sistema feito para botar meu conhecimento em prática, o site permite com que o usuário organize sua rotina diaria da forma mais eficaz e intuitiva possível, o sistema conta com contas individuais, aonde cada um poderá ter a sua propria agenda, o sistema conta com 3 funcionalidades: Agenda de contatos, Bloco de notas e Lista de Tarefas. Eu pensei nessas três funcionalidades, pois são as que eu mais utilizo(a agenda nem tanto) e portanto eu achei que seria legal eu mesmo criar um sistema que suprisse está minha necessidade.
 
-## Ferramentas Utilizadas:
+### Como Utilizar ou Testar?
 
-- Utilizando banco de dados Mysql
-- Usando C#/ .Net Core 5 para backend
-- Usando HTML5 e CSS3
-- Usando Javascript para frontend
-- Frameworks frontend: <strong>Bootstrap</strong> e <strong>SweetAlert</strong>
+- Você precisará ter o <em>Mysql</em> instalado em sua máquina - banco de dados utilizado neste sistema. Caso queira, você pode utilizar um script que deixei na pasta <em> Analise-requisitos>Banco-de-Dados </em>, ele contem o registro de dois usuarios cadastrados no banco com registros já inseridos nas outras funcionalidades do sistema
 
-## Home
+- Será necessario voce ter instalado em sua máquina o <em>.NET Core 5</em> - Framework utilizado na criação de API's, fornecido pela microsoft(em poucas palavras)
 
-<strong> Tela inicial -</strong> Aqui o usuário poderá escolher em qual das funcionalidades do sistema ele irá entrar. Pretendo ir adicionando mais coisas ao longo do tempo.
+- Após ter baixado o projeto em sua máquina, você abrirá a pasta(backend) que possui os arquivos da API, entrará no terminal e digitará "dotnet run", para assim rodar a api.
+
+- Por fim, você pode entrar na pasta que contém as páginas do sistema(frontend), entre na pasta Public>Home e clique no link chamado <em>home</em>, após isso, será aberto uma guia em seu navegador com o sistema já funcionando 
+
+## Usuário
+
+<strong> Home </strong>- A primeira vez que o usuário entrar no sistema, ele verá está tela, aqui ele pode logar no sistema, caso ele seja novo, o mesmo pode criar uma nova conta. Nesta parte o site também fornece uma breve descrição sobre o sistema.
 
 <div align="center" display="flex">
-   <img src=https://user-images.githubusercontent.com/87936511/162103493-7b6c4aae-bca3-4c8d-8d9b-5f1d10294651.png />
+  <img src=https://user-images.githubusercontent.com/87936511/169721466-ac2e7b03-3084-4a8f-8aab-df6f22a63f75.png />
 </div>
 
-## Parte 1 - Agenda de contatos
+## Menu
+Aqui o usuário poderá escolher em qual das funcionalidades do sistema ele irá entrar. O sistema conta com 3 ferramentas que auxiliaram o usuário na organização da sua rotina 
+
+<div align="center" display="flex">
+    <video src=https://user-images.githubusercontent.com/87936511/169720461-051aa579-993e-47d7-a0e6-183b47a2ce0d.mp4 height="50%" width="50%" controls></video>
+</div>
+
+## Agenda de Contatos
 
 <strong> Ver Contatos </strong>- aqui o usuário pode ver seus contatos salvos e caso queira adicionar mais um, ele faria nesta mesma tela. O sistema não permite que o usuário salve contatos sem antes preencher o campo do nome, este é o único campo que realmente é obrigatório ser preenchido. Junto deste campo temos: um campo para adicionar email, N° telefone, N° celular, estado da onde este contato é, sua cidade e por fim um bloco de notas, que serve para fazer uma breve descrição do contato.
 
 <div align="center" display="flex">
-  <img src=https://user-images.githubusercontent.com/87936511/158595114-8f0d6096-a5f1-4e55-8ab3-1c9d7b7d89c1.png />
+  <img src=https://user-images.githubusercontent.com/87936511/169719328-98a863dc-a3dc-49fe-b50b-2f2495e43a90.png />
 </div>
   
 ###
@@ -34,7 +42,7 @@ aonde o usuário poderá salvar contatos, escrever textos em blocos de notas e c
 preencher o campo de nome para adicionar um contato, aqui também é a mesma coisa, você pode deixar todos os outros campos vazios, menos o nome do contato.
 
 <div align="center" display="flex">
-  <img src=https://user-images.githubusercontent.com/87936511/158595040-3fa4c5c1-111d-4dfb-9a06-a5c1f020024e.png />
+  <img src=https://user-images.githubusercontent.com/87936511/169719325-09bd2109-ef25-415c-abc1-7458d3a9f817.png />
 </div>
 
 ###
@@ -43,18 +51,10 @@ preencher o campo de nome para adicionar um contato, aqui também é a mesma coi
 alteração, a tela mostra apenas os detalhes que realmente sao relevantes na hora de adicionar um contato, como: nome, email, telefone e celular. 
 
 <div align="center" display="flex">
-  <img src=https://user-images.githubusercontent.com/87936511/158595102-a9071863-1506-499a-a076-16176c8f71bd.png />
+  <img src=https://user-images.githubusercontent.com/87936511/169719331-6118bdf4-b09b-4291-9882-4236c5cdfc48.png />
 </div>
 
-## Protótipo
-
-Um pequeno rascunho de como eu planejo desenvolver as telas da primeira parte do sistema; A versão final pode estar diferente dessa.
-
-<div align="center">
-  <img height="700em" width="900em" src=https://user-images.githubusercontent.com/87936511/156570187-e43e2921-996f-40e0-99f0-866c426ae089.png />
-</div>
-
-## Parte 2 - Bloco de notas
+## Bloco de Notas
 
 <strong> Ver Anotações -</strong> Aqui o usuário pode ver seus textos criados, na tela é possível apenas criar um novo registro, se o usuário quiser alterar um arquivo já criado, basta apenas clicar sobre o nome de um, que assim será redirecionado para uma outra tela.
 
@@ -87,15 +87,7 @@ que confirmar está ação, clicando em "Sim" o arquivo sera excluído permanent
    <img src=https://user-images.githubusercontent.com/87936511/159474444-6f538aa1-9aa6-4137-9551-c6665d8b2703.png />
 </div>
 
-## Protótipo
-
-Rascunho das telas que terá no sistema de bloco de notas, apenas para terem uma noção de como eu planejo desenvolver está parte do sistema; A versão final pode estar diferente dessa.
-
-<div align="center">
-  <img height="700em" width="900em" src=https://user-images.githubusercontent.com/87936511/157888870-1e493a40-34be-4239-8789-e62635366832.png />
-</div>
-
-## Parte 3 - Lista de Tarefas
+## Lista de Tarefas
 
 <strong> Tela Categorias -</strong> Nesta tela o usuário pode ver todas as categorias que estão em seu sistema. As categorias funcionam como especies de grupos, aonde cada uma pode conter diferentes tipos de tarefas, como a categoria 'Estudos Web', ela agruparia todas as coisas que o usuário precisa fazer em relação aos seus estudos.
 
@@ -126,7 +118,7 @@ Caso o cliente tente salvar uma nova categoria que não possui nome e nem descri
 
 <strong> Tela Minhas Tarefas -</strong> Quando o usuário clicar sobre o icone de ver, ele será mandado para está tela, aqui contêm o titulo da categoria, sua descrição e as funcionalidades de editar, apagar, inserir e ordenar tarefas. Quando o cliente cria uma nova tarefa é possível definir seu nível de prioridade(1 até 5), quanto maior o numero mais importante é a tarefa. 
 
-É possível ver que as tarefas contam com uma data que, representa o dia em que essa tarefa foi inserida na categoria, quando o usuário conclui-lá, ele pode marcar a meta como feita atráves do checkbox, caso ele veja que não é mais necessário deixar essa tarefa na lista, ele pode simplesmente exclui-lá e por fim, se ele quiser editar o objetivo, para salvar basta apenas clicar sobre a imagem do disquete
+É possível ver que as tarefas contam com uma data que, representa o dia em que essa tarefa foi inserida na categoria, quando o usuário conclui-lá, ele pode marcar a meta como feita atráves do checkbox, caso ele veja que não é mais necessário deixar essa tarefa na lista, ele pode simplesmente exclui-lá e por fim, se ele quiser editar o objetivo, para salvar basta apenas clicar sobre a imagem do disquete.
 
 <div align="center">
   <img src=https://user-images.githubusercontent.com/87936511/164012496-99328f42-8a5d-4aaf-a9c7-11ae82dc39a3.png />
@@ -140,12 +132,39 @@ Se o usuário tentar salvar uma nova tarefa com um campo vazio, um erro é retor
   <img src=https://user-images.githubusercontent.com/87936511/164013309-aa2f15bd-4730-44d2-a062-3d47de768fe6.PNG />
 </div>
 
-## Protótipo
+## Protótipos:
 
-como eu pretendo desenvolver as telas da parte 3, está funcionalidade tera apenas duas telas e essas telas terão todo o crud do sistema. A parte de categorias refere-se a tipos de tarefas expecificas, seja coisas que eu preciso fazer em casa ou coisas que preciso fazer no trabalho, assim facilita a organização do usuário.
+A <em> Agenda de Contatos </em> possuirá 3 telas, nelas terão todo o crud do sistema; este é um rascunho, então a versão final pode estar diferente dessa.
+
+<div align="center">
+  <img height="700em" width="900em" src=https://user-images.githubusercontent.com/87936511/156570187-e43e2921-996f-40e0-99f0-866c426ae089.png />
+</div>
+
+##
+
+Funcionalidades do sistema <em> Bloco de Notas </em>, o sistema conta com 3 telas que contem todo o crud do gerenciador, a tela que mostra o contéudo da anotação possibilita o usuário de editar e apagar o texto escrito.
+
+<div align="center">
+  <img height="700em" width="900em" src=https://user-images.githubusercontent.com/87936511/157888870-1e493a40-34be-4239-8789-e62635366832.png />
+</div>
+
+##
+
+A funcionalidade <em> Lista de Tarefas </em> terá apenas duas telas e essas telas terão todo o crud do sistema. A parte de categorias refere-se a tipos de tarefas expecificas, seja coisas que eu preciso fazer em casa ou coisas que preciso fazer no trabalho, assim facilita a organização do usuário.
 
 <div align="center">
   <img height="500em" width="990em" src=https://user-images.githubusercontent.com/87936511/159939312-0b840fce-1e5e-4e3c-855c-3b93698557b5.png />
 </div>
 
+## Estrutura do Banco de Dados:
 
+<div align="center">
+  <img height="500em" src=https://user-images.githubusercontent.com/87936511/169720956-cefb9e35-e14d-43ce-9426-c51a141f2712.png />
+</div>
+
+## Ferramentas Utilizadas:
+
+- Utilizando banco de dados Mysql
+- Usando C#/ .Net Core 5 para backend
+- Usando HTML5 e CSS3
+- Frameworks frontend: <strong>Bootstrap</strong> e <strong>SweetAlert</strong>
